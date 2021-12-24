@@ -12,7 +12,7 @@ const HeaderStatusBox: React.FC<ResUserPresence | null> = ({ data }) => {
         {
           data.assets && data.name === "Spotify" ? <Image boxSize={"65px"} src={ResolveSpotifyURL(data.assets.largeImage?.split(":")[1])} fallbackSrc="https://cutiecat6778.github.io/cdn/discord-icon.png"/> : (
             data.assets && data.name === "Visual Studio Code" ? <Image boxSize={"65px"} src={"https://cutiecat6778.github.io/cdn/vscode.png"} fallbackSrc="https://cutiecat6778.github.io/cdn/discord-icon.png"/> : 
-            null
+            <Image boxSize={"65px"} src={"https://cutiecat6778.github.io/cdn/discord-icon.png"}/>
           )
         }
         <Box ml="10px" color="white">
