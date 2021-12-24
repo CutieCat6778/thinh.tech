@@ -3,8 +3,8 @@ import '@fontsource/open-sans/400.css'
 import {
   ChakraProvider, CSSReset, Flex,
 } from "@chakra-ui/react"
-import { Main } from "./pages/Main"
 import theme from "./utils/theme"
+import { AppRouter } from './routers'
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -13,7 +13,7 @@ export const App = () => (
       backgroundColor={"#23272A"}
       justifyContent={"center"}>
       <CSSReset />
-      <Main />
+      <AppRouter />
     </Flex>
   </ChakraProvider>
 )
