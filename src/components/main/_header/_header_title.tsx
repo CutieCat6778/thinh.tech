@@ -29,7 +29,7 @@ export const MotionBox = motion(
           <TypewriterComponent
             options={{
               autoStart: true,
-              strings: ["highschool student", "developer", "bot dev", "discord user", "mathematician"],
+              strings: ["student", "developer", "mathematician", "human", "boy", "idiot"],
               loop: true,
             }}
           />
