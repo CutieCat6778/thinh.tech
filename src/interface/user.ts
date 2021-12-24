@@ -10,6 +10,7 @@ export interface UserPresence {
   party?: Party;
   assets?: Assets;
   createdTimestamp: number;
+  emoji?: Emoji
 }
 
 export interface ResUserPresence {
@@ -18,6 +19,13 @@ export interface ResUserPresence {
 
 export interface User {
   presence: Acitivy;
+}
+
+interface Emoji {
+  animated: boolean;
+  name: string;
+  deleted: boolean;
+  identifier: string;
 }
 
 interface Acitivy {
