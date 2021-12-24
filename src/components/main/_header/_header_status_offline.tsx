@@ -6,7 +6,7 @@ export function HeaderStatusBoxOffline() {
       <Image src="https://cutiecat6778.github.io/cdn/dictionary.png" />
       <Box ml="10px" color="white">
         <Text size="lg" color={"gray.400"}>
-          Is learning | for a while
+          Is learning
         </Text>
         <Heading>
           Improving my knowledge
