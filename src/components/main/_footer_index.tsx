@@ -42,7 +42,7 @@ export function Footer() {
         />
       </Link>
       <Link to="/profile">
-        <InfoIcon color="main.cyan" boxSize={10} />
+        <InfoIcon color="main.red" boxSize={10} />
       </Link>
     </Stack>
   )

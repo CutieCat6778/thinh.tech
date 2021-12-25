@@ -11,13 +11,8 @@ export function HeaderStatus() {
 
   useEffect(() => {
     async function setUserStatus() {
-      const data = await GetUserStatus();
-      setCurrStatus(data[i])
-      setInterval(() => {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        i === data.length - 1 ? i = 0 : i++;
-        setCurrStatus(data[i])
-      }, 7500)
+      const data: UserPresence = await GetUserStatus();
+      setCurrStatus(data)
     }
     setUserStatus();
   }, [i])
