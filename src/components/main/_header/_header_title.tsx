@@ -4,6 +4,7 @@ import {
   ComponentWithAs,
   Flex,
   Box,
+  Heading,
 } from "@chakra-ui/react";
 import { motion, MotionProps, useMotionValue, useTransform } from "framer-motion";
 import TypewriterComponent from "typewriter-effect";
@@ -20,15 +21,15 @@ export type MotionBoxProps = Omit<
 export const MotionBox = motion(
   forwardRef<ChakraProps, "div">((props, ref) => {
     return (
-      <Flex ref={ref} {...props} fontSize={"6xl"} flexDirection={{base: "column", sm: "row"}}>
-        <Box color="white">
+      <Flex ref={ref} {...props} flexDirection={"row"}>
+        <Box color="black">
           I'm
         </Box>
-        <Box ml={{base: "0px", sm: "15px"}}>
+        <Box ml={"15px"}>
           <TypewriterComponent
             options={{
               autoStart: true,
-              strings: ["a student", "a developer", "a mathematician", "a human", "a boy", "an idiot"],
+              strings: ["a student.", "a developer.", "a human.", "a boy.", "an idiot."],
               loop: true,
             }}
           />
@@ -43,12 +44,20 @@ export function HeaderTitle() {
   const opacity = useTransform(x, [-100, 0, 100], [0, 1, 0])
 
   return (
-    <MotionBox
-      animate={{ x: [-100, 0] }}
-      transition={{ ease: "easeOut", duration: 2 }}
-      style={{ x, opacity }}
-      fontWeight={"900"}
-      color={"main.red"}
-    />
+    <Flex justifyContent={"center"} alignItems={"center"} flexDir={"column"}>
+      <Heading fontSize={{base: "4xl", "lg": "5xl"}} color="black" fontFamily={"Archivo Black"} fontWeight={100}>
+        Thinh Nguyen
+      </Heading>
+      <MotionBox
+        animate={{ x: [-100, 0] }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        style={{ x, opacity }}
+        fontWeight={"100"}
+        color={"main.red"}
+        fontSize={"2xl"}
+        marginY={"16px"}
+        fontFamily={"Space Mono"}
+      />
+    </Flex>
   )
 }

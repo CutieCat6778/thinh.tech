@@ -1,4 +1,4 @@
-import { StarIcon } from "@chakra-ui/icons";
+import { InfoIcon, StarIcon, ViewIcon } from "@chakra-ui/icons";
 import { Box, Stack } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import {
@@ -30,14 +30,23 @@ export const MotionBox = motion(
 
 export function Footer() {
   return (
-    <Stack direction={{base: "row", lg: "column"}} spacing="15px" m="15px">
+    <Stack 
+      direction={{base: "row", lg: "column"}} 
+      spacing="20px" 
+      m="15px"
+      alignSelf={{base: "right", lg: "center"}}>
+      <Link to="/cv">
+        <ViewIcon color="main.red" boxSize={10} />
+      </Link>
       <Link to="/projects">
         <MotionBox
           animate={{ rotate: 720 }}
           transition={{ ease: "easeOut", duration: 5 }}
         />
       </Link>
+      <Link to="/bio">
+        <InfoIcon color="main.cyan" boxSize={10} />
+      </Link>
     </Stack>
-    
   )
 }

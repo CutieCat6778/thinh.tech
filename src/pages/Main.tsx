@@ -11,9 +11,9 @@ export function Main() {
       justifyContent={"space-between"}
       flexDirection={{base: "column", lg: "row"}}
     >
-      <SideBar/>
-      <HeaderIndex/>
       <Footer />
+      <HeaderIndex/>
+      <SideBar/>
     </Flex>
   )
 }

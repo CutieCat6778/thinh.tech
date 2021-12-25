@@ -12,7 +12,8 @@ const theme = extendTheme({
     }
   },
   fonts: {
-    heading: "Open Sans"
+    heading: "Open Sans",
+    mono: "Space Mono"
   }
 })
 

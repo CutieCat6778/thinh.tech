@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { UserPresence } from '../../../interface/user';
 import { GetUserStatus } from '../../../utils/discordApi';
 import HeaderStatusBox from './_header_status_normal';
-import { HeaderStatusBoxOffline } from './_header_status_offline';
 
 export function HeaderStatus() {
   const [currStatus, setCurrStatus] = useState<UserPresence | null>();
@@ -28,7 +27,7 @@ export function HeaderStatus() {
       {
         currStatus ?
           <HeaderStatusBox data={currStatus} />
-          : <HeaderStatusBoxOffline/>
+          : null
       }
     </Box>
   )
