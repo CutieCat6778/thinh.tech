@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Bio } from './pages/Bio';
 import { Main } from './pages/Main';
 
 export function AppRouter () {
@@ -8,6 +8,7 @@ export function AppRouter () {
       <Routes>
         {/* Other routers */}
         <Route path="/" element={<Main/>} />
+        <Route path="/profile" element={<Bio/>} />
       </Routes>
     </BrowserRouter>
   );
