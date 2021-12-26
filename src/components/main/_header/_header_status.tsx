@@ -7,15 +7,18 @@ import HeaderStatusBox from './_header_status_normal';
 export function HeaderStatus() {
   const [currStatus, setCurrStatus] = useState<UserPresence | null>();
 
-  let i = 0;
+  const TIME = 3 * 60 * 1000;
 
   useEffect(() => {
     async function setUserStatus() {
       const data: UserPresence = await GetUserStatus();
-      setCurrStatus(data)
+      setCurrStatus(data);
     }
     setUserStatus();
-  }, [i])
+    setInterval(() => {
+      setUserStatus();
+    }, TIME)
+  }, [TIME])
 
   return (
     <Box>
