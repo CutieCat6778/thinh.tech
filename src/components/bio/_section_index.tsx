@@ -4,7 +4,7 @@ import { SectionSkill } from "./section/_section_skill";
 
 export function Section() {
   return (
-    <Box>
+    <Box mb="50px">
       <Box>
         <Heading mb="20px" fontWeight={800} textAlign={"center"} fontFamily={"Space Mono"}>Personal Skills</Heading>
         <SectionSkill/>

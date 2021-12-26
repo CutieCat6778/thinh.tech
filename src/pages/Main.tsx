@@ -9,13 +9,13 @@ export function Main() {
       alignItems={"center"}
       width={"100%"}
       justifyContent={"space-between"}
-      flexDirection={{base: "column", lg: "row"}}
+      flexDirection={{ base: "column", lg: "row" }}
     >
       <Footer />
-      <Spacer/>
-      <HeaderIndex/>
-      <Spacer/>
-      <SideBar/>
+      <Spacer />
+      <HeaderIndex />
+      <Spacer />
+      <SideBar />
     </Flex>
   )
 }
