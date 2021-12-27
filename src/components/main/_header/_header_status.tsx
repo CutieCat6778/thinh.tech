@@ -23,7 +23,7 @@ export function HeaderStatus() {
   return (
     <Box>
       {
-        currStatus ?
+        currStatus && currStatus.name && currStatus?.image ?
           <HeaderStatusBox data={currStatus} />
           : null
       }
