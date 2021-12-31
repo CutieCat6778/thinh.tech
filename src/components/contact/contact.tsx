@@ -2,7 +2,7 @@ import { Box, Divider, Heading, Image, Link, Stack } from "@chakra-ui/react";
 
 export function Contact() {
   return (
-    <Box mt="100px">
+    <Box mt="100px" id="contact">
       <Heading fontSize="5xl" textAlign={"center"}>
         Contact
       </Heading>

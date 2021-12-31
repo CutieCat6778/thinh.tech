@@ -18,7 +18,7 @@ export function SectionEducation() {
       </Flex>
       <Flex mt="50px" alignItems={"center"} justifyContent={{base: "center", md:"space-between"}} flexDir={{base: "column-reverse", md: "row"}}>
         <Box>
-          <Heading>
+          <Heading mt={{base: "15px", md: 0}}>
             <Link d="inline" href="https://www.bickebergschule-vs.de/startseite" fontWeight={"600"}>
               Bickebergschule
             </Link>
