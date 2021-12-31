@@ -14,7 +14,7 @@ export function Contact() {
         mt="75px"
         userSelect={"none"}
         direction={"row"} spacing="15px" m="15px">
-        <Link href="https://instagram.com/nhtt.2307">
+        <Link href="https://instagram.com/txzje">
           <Image boxSize={{ base: "40px", lg: "50px" }} src="https://cutiecat6778.github.io/cdn/instagram.png" alt="Instagram logo" />
         </Link>
         <Link href="https://github.com/CutieCat6778">
