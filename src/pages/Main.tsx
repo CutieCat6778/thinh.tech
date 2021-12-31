@@ -1,21 +1,21 @@
-import { Flex, Spacer } from "@chakra-ui/react";
-import { Footer } from "../components/main/_footer_index";
-import { HeaderIndex } from "../components/main/_header_index";
-import { SideBar } from "../components/main/_sideBar_index";
+import { Flex, Divider } from "@chakra-ui/react";
+import { About } from "../components/about/about";
+import { Contact } from "../components/contact/contact";
+import { Education } from "../components/education/education";
+import { Header } from "../components/main/header.main";
+import { Navigation } from "../components/main/navigation.main";
+import { Skills } from "../components/skills/skills";
 
 export function Main() {
   return (
-    <Flex
-      alignItems={"center"}
-      width={"100%"}
-      justifyContent={"space-between"}
-      flexDirection={{ base: "column", lg: "row" }}
-    >
-      <Footer />
-      <Spacer />
-      <HeaderIndex />
-      <Spacer />
-      <SideBar />
+    <Flex paddingX={{base: "5vw", sm: "10vw", lg: "25vw" ,xl: "30vw"}} paddingY="20px" flexDir={"column"} justifyContent={"center"}>
+      <Navigation/>
+      <Divider marginY="25px"/>
+      <Header/>
+      <About/>
+      <Skills/>
+      <Education/>
+      <Contact/>
     </Flex>
   )
 }

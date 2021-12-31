@@ -3,6 +3,11 @@ import React from "react";
 import { ResUserPresence } from "../../../interface/user";
 
 const HeaderStatusBox: React.FC<ResUserPresence | null> = ({ data }) => {
+
+  if(data && data.name && data.name.length >= 15){
+    data.name = data.name.split(" ").slice(0, 3).join(' ') + '...';
+  }
+
   return (
     <Flex alignItems={"center"} justifyContent={"center"}>
       <Image boxSize={{ base: "40px", lg: "50px" }} alt="Status icon" src={data.image} />
