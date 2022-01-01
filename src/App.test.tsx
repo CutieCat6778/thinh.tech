@@ -1,9 +1,9 @@
 import { screen } from "@testing-library/react"
 import { render } from "./test-utils"
-import { App } from "./App"
+import { Main } from "./pages/Main"
 
 test("renders learn react link", () => {
-  render(<App />)
-  const linkElement = screen.getByText(/learn chakra/i)
+  render(<Main />)
+  const linkElement = screen.getByText(/About/i)
   expect(linkElement).toBeInTheDocument()
 })

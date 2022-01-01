@@ -8,7 +8,7 @@ import { Skills } from "../components/skills/skills";
 
 export function Main() {
   return (
-    <Flex paddingX={{base: "5vw", sm: "10vw", lg: "25vw" ,xl: "30vw"}} paddingY="20px" flexDir={"column"} justifyContent={"center"}>
+    <Flex paddingX={{base: "5vw", sm: "10vw", lg: "18vw" ,xl: "30vw"}} paddingY="20px" flexDir={"column"} justifyContent={"center"}>
       <Navigation/>
       <Divider marginY="25px"/>
       <Header/>
