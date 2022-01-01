@@ -7,9 +7,10 @@ export function Navigation() {
     <Flex flexDir={"row"} justifyContent={"right"}
       alignItems={"center"}>
       <Box marginRight="auto">
-        <Link to="https://txzje.xyz">
-          <Image boxSize="80px" src="https://cutiecat6778.github.io/cdn/logo/logo_102.png" alt="Logo"/>
-        </Link>
+        <Chakra.Link href="https://txzje.xyz">
+          <Image d={{base: "none", md: "block"}} src="https://cutiecat6778.github.io/cdn/logo/logo_102.png" alt="Logo"/>
+          <Image d={{base: "block", md: "none"}} src="https://cutiecat6778.github.io/cdn/logo/logo_51.png" alt="Logo"/>
+        </Chakra.Link>
       </Box>
       <Chakra.Link href="#about" >
         <Text to="about" as={Link} spy={true} smooth={true}>About</Text>
