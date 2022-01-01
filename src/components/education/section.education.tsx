@@ -14,7 +14,7 @@ export function SectionEducation() {
             We are СМГ, the top 1 school in Bulgaria. We are mathematician and we love math.
           </Text>
         </Box>
-        <Image boxSize={"175px"} src="https://cutiecat6778.github.io/cdn/smg.png" mr={{base: 0, md:"75px"}} />
+        <Image alt="Smg Logo" boxSize={"175px"} src="https://cutiecat6778.github.io/cdn/smg.png" mr={{base: 0, md:"75px"}} />
       </Flex>
       <Flex mt="50px" alignItems={"center"} justifyContent={{base: "center", md:"space-between"}} flexDir={{base: "column-reverse", md: "row"}}>
         <Box>
@@ -27,7 +27,7 @@ export function SectionEducation() {
             It is a german school with many friendly people, the teachers are the best. Shout out to <Text d="inline-block" fontWeight={"600"}>Mr. Todt</Text>.
           </Text>
         </Box>
-        <Image boxSize={"175px"} src="https://cutiecat6778.github.io/cdn/bickeberg.png" mr={{base: 0, md:"75px"}} />
+        <Image alt="Bickeberg logo" boxSize={{base: "40%",md:"20%"}} src="https://cutiecat6778.github.io/cdn/bickeberg.png" mr={{base: 0, md:"75px"}} />
       </Flex>
     </Box >
   )

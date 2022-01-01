@@ -5,7 +5,7 @@ import { HeaderStatus } from "./header/status.header.main";
 export function Header() {
   return (
     <Flex justifyContent={"space-around"} alignItems={"center"} minH="300px" flexDir={{base: "column", md: "row-reverse"}}>
-      <Image m={"20px"} boxSize={"36"} border={"1px solid black"} src="https://cutiecat6778.github.io/cdn/pfp/pfp_25.jpg" />
+      <Image m={"20px"} boxSize={"36"} border={"1px solid black"} alt="Profile picture" src="https://cutiecat6778.github.io/cdn/pfp/pfp_50.jpg" />
       <Stack spacing={"20px"}>
         <Heading ml="20px" fontFamily={"Space Mono"}  minW="250px" textAlign={"center"}>
           <TypeWriter
