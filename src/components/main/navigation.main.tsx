@@ -8,8 +8,7 @@ export function Navigation() {
       alignItems={"center"}>
       <Box marginRight="auto">
         <Chakra.Link href="https://txzje.xyz">
-          <Image d={{base: "none", md: "block"}} src="https://cutiecat6778.github.io/cdn/logo/logo_102.png" alt="Logo"/>
-          <Image d={{base: "block", md: "none"}} src="https://cutiecat6778.github.io/cdn/logo/logo_51.png" alt="Logo"/>
+          <Image src="https://cutiecat6778.github.io/cdn/logo/logo_102.png" alt="Logo"/>
         </Chakra.Link>
       </Box>
       <Chakra.Link href="#about" >
