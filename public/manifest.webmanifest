@@ -41,8 +41,15 @@
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "https://cutiecat6778.github.io/cdn/logo/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "lang": "en-US",
-  "categories": ["portfolio", "profile", "personal"]
+  "categories": ["portfolio", "profile", "personal"],
+  "theme_color": "#fff"
 }
