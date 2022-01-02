@@ -8,7 +8,7 @@ export function Navigation() {
       alignItems={"center"}>
       <Box marginRight="auto">
         <Chakra.Link href="https://txzje.xyz">
-          <Image src="https://cutiecat6778.github.io/cdn/logo/logo_102.png" alt="Logo" />
+          <Image src="https://cutiecat6778.github.io/cdn/logo/logo_118.png" alt="Logo" />
         </Chakra.Link>
       </Box>
       <Text to="about" as={Link} href="#about" spy={true} smooth={true}>About</Text>
