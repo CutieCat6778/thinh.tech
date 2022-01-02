@@ -8,6 +8,7 @@ export function AppRouter() {
       <Routes>
         {/* Other routers */}
         <Route path="/" element={<Main />} />
+        <Route path="/service-worker.js"/>
         <Route path="*" element={<Redirect />} />
       </Routes>
     </BrowserRouter>
