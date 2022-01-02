@@ -8,21 +8,13 @@ export function Navigation() {
       alignItems={"center"}>
       <Box marginRight="auto">
         <Chakra.Link href="https://txzje.xyz">
-          <Image src="https://cutiecat6778.github.io/cdn/logo/logo_102.png" alt="Logo"/>
+          <Image src="https://cutiecat6778.github.io/cdn/logo/logo_102.png" alt="Logo" />
         </Chakra.Link>
       </Box>
-      <Chakra.Link href="#about" >
-        <Text to="about" as={Link} spy={true} smooth={true}>About</Text>
-      </Chakra.Link>
-      <Chakra.Link href="#skills" ml="20px">
-        <Text to="skills" as={Link} spy={true} smooth={true}>Skills</Text>
-      </Chakra.Link>
-      <Chakra.Link href="#education" ml="20px">
-        <Text to="education" as={Link} spy={true} smooth={true}>Education</Text>
-      </Chakra.Link>
-      <Chakra.Link href="#contact" ml="20px">
-        <Text to="contact" as={Link} spy={true} smooth={true}>Contact</Text>
-      </Chakra.Link>
+      <Text to="about" as={Link} href="#about" spy={true} smooth={true}>About</Text>
+      <Text to="skills" as={Link} href="#skills" spy={true} smooth={true} ml="20px">Skills</Text>
+      <Text to="education" as={Link} href="#education" spy={true} smooth={true} ml="20px">Education</Text>
+      <Text to="contact" as={Link} href="#contact" spy={true} smooth={true} ml="20px">Contact</Text>
     </Flex>
   )
 }
