@@ -1,6 +1,15 @@
 import { extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from '@chakra-ui/theme-tools'
 
+const breakpoints = createBreakpoints({
+  sm: '30em',
+  ksm: '38em',
+  md: '48em',
+  lg: '62em',
+  xl: '80em',
+  '2xl': '96em',
+})
+
 const theme = extendTheme({
   colors: {
     main: {
@@ -15,15 +24,8 @@ const theme = extendTheme({
   fonts: {
     heading: "Open Sans",
     mono: "Space Mono"
-  }
-})
-
-createBreakpoints({
-  sm: '30em',
-  md: '48em',
-  lg: '62em',
-  xl: '80em',
-  '2xl': '96em',
+  },
+  breakpoints: breakpoints,
 })
 
 export default theme;

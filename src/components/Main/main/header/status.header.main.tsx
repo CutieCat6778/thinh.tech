@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import { UserPresence } from '../../../interface/user';
-import { GetUserStatus } from '../../../utils/discordApi';
+import { UserPresence } from '../../../../interface/user';
+import { GetUserStatus } from '../../../../utils/discordApi';
 import HeaderStatusBox from './displayStatus.header.main';
 
 export function HeaderStatus() {
