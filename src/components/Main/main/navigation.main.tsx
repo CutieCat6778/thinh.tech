@@ -25,7 +25,7 @@ const Navigation: React.FC<NavigationToggle> = ({ toggle, setToggle }) => {
       <Menu autoSelect={false} isLazy>
         <MenuButton as={Button} _hover={{
           backgroundColor: "none"
-        }} variant="ghost" rightIcon={<ChevronDownIcon />} d={{ base: "none", md: "flex" }} textAlign="center">
+        }} _focus={{boxShadow: "none"}} variant="ghost" rightIcon={<ChevronDownIcon />} d={{ base: "none", md: "flex" }} textAlign="center">
           Categories
         </MenuButton>
         <MenuList p={0}>
