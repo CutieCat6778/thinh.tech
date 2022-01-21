@@ -42,7 +42,7 @@ const Navigation: React.FC<NavigationToggle> = ({ toggle, setToggle }) => {
             <Text onClick={toggleProjectOff} to="contact" as={Link} href="#contact" spy={true} smooth={true} width="100%">Contact</Text>
           </MenuItem>
         </MenuList>
-        <Text onClick={toggleProject} ml="20px" d={{ base: "none", md: "flex" }} fontWeight={"600"}>Projects</Text>
+        <Button onClick={toggleProject} ml="20px" d={{ base: "none", md: "flex" }} fontWeight={"600"}>Projects</Button>
       </Menu>
       <Menu autoSelect={false} isLazy>
         <MenuButton as={HamburgerIcon} d={{ base: "block", md: "none" }} boxSize={"30px"} />
