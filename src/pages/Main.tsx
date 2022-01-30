@@ -13,14 +13,9 @@ export function Main() {
 
   const handleNavigation = useCallback(
     (e) => {
+      if(!y) return;
       const window = e.currentTarget;
-      if (y > window.scrollY) {
-        console.log("scrolling up");
-      } else if (y < window.scrollY) {
-        console.log("scrolling down");
-      }
       setY(window.scrollY);
-      console.log(y);
     },
     [y]
   );
