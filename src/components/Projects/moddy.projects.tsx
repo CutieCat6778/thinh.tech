@@ -3,7 +3,7 @@ import { Box, Button, Flex, Heading, Image, Link, Stack, Tag, Text } from "@chak
 export function Moddy() {
   return (
     <Flex maxW="400px" borderRadius={"12px"} flexDir={"column"} alignItems={"center"} justifyContent={"center"}>
-      <Image borderRadius={"17px"} src="https://cutiecat6778.github.io/cdn/moddy/moddy_96.png" />
+      <Image borderRadius={"17px"} src="https://cutiecat6778.github.io/cdn/moddy/moddy_96.png" alt="Moddy Logo" />
       <Box mr="auto" mt="30px">
         <Heading fontSize="3xl">
           Moddy

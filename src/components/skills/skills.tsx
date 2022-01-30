@@ -1,12 +1,12 @@
 import { Box } from "@chakra-ui/react";
 import { FC } from "react";
 import { Scroll } from "../../interface/state";
-import { HeaderMotion } from "./header.motion.projects";
-import { SectionMotion } from "./section.motion.projects";
+import { HeaderMotion } from "./header.motion.skills";
+import { SectionMotion } from "./section.motion.skills";
 
-export const Projects: FC<Scroll> = ({y}) => {
+export const Skills: FC<Scroll> = ({y}) => {
   return(
-    <Box mt="75px" id="projects">
+    <Box mt="75px" id="skills">
       <HeaderMotion y={y}/>
       <SectionMotion y={y}/>
     </Box>

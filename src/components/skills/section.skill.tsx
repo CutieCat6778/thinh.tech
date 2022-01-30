@@ -2,8 +2,11 @@ import { Grid, GridItem, Heading, ListItem, Stack, UnorderedList } from "@chakra
 
 export function SectionSkill() {
   return (
-    <Grid templateColumns={{base: 'repeat(2, 1fr)', md:'repeat(3, 1fr)'}}>
-      <GridItem mt="20px">
+    <Grid templateColumns={{base: 'repeat(2, 1fr)', md:'repeat(3, 1fr)'}} fontFamily={"Open Sans"}>
+      <GridItem mt="20px" _hover={{
+            marginTop: "10px",
+            transition: "margin 0.8s",
+          }}>
         <Heading fontSize={{base: "1x", md: "2xl"}}>
           Languages (code)
         </Heading>
@@ -19,7 +22,10 @@ export function SectionSkill() {
           </ListItem>
         </UnorderedList>
       </GridItem>
-      <GridItem mt="20px">
+      <GridItem mt="20px" _hover={{
+            marginTop: "10px",
+            transition: "margin 0.8s",
+          }}>
         <Heading fontSize={{base: "1x", md: "2xl"}}>
           Frameworks
         </Heading>
@@ -35,7 +41,10 @@ export function SectionSkill() {
           </ListItem>
         </UnorderedList>
       </GridItem>
-      <GridItem mt="20px">
+      <GridItem mt="20px" _hover={{
+            marginTop: "10px",
+            transition: "margin 0.8s",
+          }}>
         <Heading fontSize={{base: "1x", md: "2xl"}}>
           Dev-Ops
         </Heading>
@@ -51,7 +60,10 @@ export function SectionSkill() {
           </ListItem>
         </UnorderedList>
       </GridItem>
-      <GridItem mt="20px">
+      <GridItem mt="20px" _hover={{
+            marginTop: "10px",
+            transition: "margin 0.8s",
+          }}>
         <Heading fontSize={{base: "1x", md: "2xl"}}>
           IDE
         </Heading>
@@ -70,8 +82,11 @@ export function SectionSkill() {
           </ListItem>
         </UnorderedList>
       </GridItem>
-      <Stack as={GridItem} spacing="25px" mt="20px">
-        <Stack>
+      <GridItem spacing="25px" mt="20px" _hover={{
+            marginTop: "10px",
+            transition: "margin 0.8s",
+          }}>
+        <Stack >
           <Heading fontSize={{base: "1x", md: "2xl"}}>
             Version Control
           </Heading>
@@ -81,18 +96,21 @@ export function SectionSkill() {
             </ListItem>
           </UnorderedList>
         </Stack>
-        <Stack>
+        <Stack mt="20px">
           <Heading fontSize={{base: "1x", md: "2xl"}}>
             Databases
           </Heading>
           <UnorderedList mt="10px" fontSize={{base: "15px", md: "20px"}} pl="20px">
             <ListItem>
-              MongoDB (mongoose)
+              MongoDB
             </ListItem>
           </UnorderedList>
         </Stack>
-      </Stack>
-      <GridItem mt="20px">
+      </GridItem>
+      <GridItem mt="20px" _hover={{
+            marginTop: "10px",
+            transition: "margin 0.8s",
+          }}>
         <Heading fontSize={{base: "1x", md: "2xl"}}>
           Languages
         </Heading>

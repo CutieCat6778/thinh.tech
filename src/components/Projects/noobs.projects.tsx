@@ -3,7 +3,7 @@ import { Box, Button, Flex, Heading, Image, Link, Stack, Tag, Text } from "@chak
 export function Noobs() {
   return (
     <Flex maxW="400px" borderRadius={"12px"} flexDir={"column"} alignItems={"center"} justifyContent={"center"}>
-      <Image borderRadius={"17px"} src="https://cutiecat6778.github.io/cdn/noobs_96.png" />
+      <Image borderRadius={"17px"} src="https://cutiecat6778.github.io/cdn/noobs_96.png" alt="Noobs logo" />
       <Box mr="auto" mt="28px">
         <Heading fontSize="3xl">
           Noobs

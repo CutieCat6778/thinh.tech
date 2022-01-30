@@ -1,12 +1,14 @@
 import { Box } from "@chakra-ui/react";
+import { FC } from "react";
+import { Scroll } from "../../../interface/state";
 import { HeaderAbout } from "./header.about";
 import { SectionAbout } from "./section.about";
 
-export function About(){
+export const About: FC<Scroll> = ({y}) => {
   return (
     <Box id="about">
-      <HeaderAbout/>
-      <SectionAbout/>
+      <HeaderAbout y={y}/>
+      <SectionAbout y={y}/>
     </Box>
   )
 }
