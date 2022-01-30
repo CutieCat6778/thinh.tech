@@ -16,7 +16,7 @@ export function Main() {
       const window = e.currentTarget;
       setY(window.scrollY);
     },
-    [y]
+    []
   );
 
   useEffect(() => {
