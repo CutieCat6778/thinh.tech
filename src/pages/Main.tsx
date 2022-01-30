@@ -13,7 +13,6 @@ export function Main() {
 
   const handleNavigation = useCallback(
     (e) => {
-      if(!y) return;
       const window = e.currentTarget;
       setY(window.scrollY);
     },
