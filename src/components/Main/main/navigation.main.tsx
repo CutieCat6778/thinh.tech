@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationToggle> = ({ toggle, setToggle }) => {
       alignItems={"center"}>
       <Box marginRight="auto">
         <Chakra.Link href="https://txzje.xyz">
-          <Image src="https://cutiecat6778.github.io/cdn/logo/logo_118.png" alt="Logo" boxSize={"118px"}/>
+          <Image src="https://cutiecat6778.github.io/cdn/logo/logo_238.png" alt="Logo" boxSize={"118px"}/>
         </Chakra.Link>
       </Box>
       <Menu autoSelect={false} isLazy>
