@@ -3,7 +3,7 @@ import '@fontsource/space-mono/400.css'
 import '@fontsource/archivo-black/400.css'
 
 import {
-  ChakraProvider, CSSReset,
+  ChakraProvider, ColorModeScript, CSSReset,
 } from "@chakra-ui/react"
 import {theme} from "./utils/theme"
 import { AppRouter } from './routers'
@@ -12,6 +12,7 @@ import { AppRouter } from './routers'
 export const App = () => (
   <ChakraProvider theme={theme}>
     <CSSReset />
+    <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
     <AppRouter />
   </ChakraProvider>
 )

@@ -6,7 +6,7 @@ import { SectionAbout } from "./section.about";
 
 export const About: FC<Scroll> = ({y}) => {
   return (
-    <Box id="about">
+    <Box id="about" minH="600px">
       <HeaderAbout y={y}/>
       <SectionAbout y={y}/>
     </Box>

@@ -6,7 +6,7 @@ import { SectionMotion } from "./section.motion.skills";
 
 export const Skills: FC<Scroll> = ({y}) => {
   return(
-    <Box mt="75px" id="skills">
+    <Box mt="75px" id="skills" minH="500px">
       <HeaderMotion y={y}/>
       <SectionMotion y={y}/>
     </Box>

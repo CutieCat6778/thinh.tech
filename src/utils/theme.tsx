@@ -34,4 +34,8 @@ export const theme = extendTheme(DefaultTheme, {
     mono: "Space Mono"
   },
   breakpoints: breakpoints,
+  config: {
+    initialColorMode: 'system',
+    useSystemColorMode: true,
+  }
 })
