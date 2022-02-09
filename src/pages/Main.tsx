@@ -1,11 +1,11 @@
 import { Flex, Divider } from "@chakra-ui/react";
 import { useCallback, useEffect, useState } from "react";
 import { About } from "../components/Main/about/about";
-import { Contact } from "../components/Main/contact/contact";
 import { Header } from "../components/Main/main/header.main";
 import Navigation from "../components/Main/main/navigation.main";
 import { Skills } from "../components/skills/skills";
 import { Projects } from "../components/Projects/projects";
+import { Footer } from "../components/Main/main/footer.main";
 
 export function Main() {
   const [toggle, setToggle] = useState(true);
@@ -47,7 +47,7 @@ export function Main() {
       <About y={y}/>
       <Skills y={y} />
       <Projects y={y} />
-      <Contact />
+      <Footer/>
     </Flex>
   );
 }

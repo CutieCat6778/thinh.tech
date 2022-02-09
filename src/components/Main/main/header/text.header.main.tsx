@@ -12,6 +12,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { useState } from "react";
+import { Contact } from "../../contact/contact";
 
 export type MotionBoxProps = Omit<ChakraProps, keyof MotionProps> &
   MotionProps & {
@@ -35,6 +36,7 @@ export const MotionBox = motion(
         >
           FULL STACK WEB DEVELOPER
         </Text>
+        <Contact/>
       </Box>
     );
   })

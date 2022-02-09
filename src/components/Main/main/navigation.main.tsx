@@ -84,18 +84,6 @@ const Navigation: React.FC<NavigationToggle> = ({ toggle, setToggle }) => {
               Projects
             </Text>
           </MenuItem>
-          <MenuItem>
-            <Text
-              to="contact"
-              as={Link}
-              href="#contact"
-              spy={true}
-              smooth={true}
-              width="100%"
-            >
-              Contact
-            </Text>
-          </MenuItem>
         </MenuList>
       </Menu>
       <Menu autoSelect={false} isLazy>
@@ -139,18 +127,6 @@ const Navigation: React.FC<NavigationToggle> = ({ toggle, setToggle }) => {
               width={"100%"}
             >
               Projects
-            </Text>
-          </MenuItem>
-          <MenuItem>
-            <Text
-              as={Link}
-              to="contact"
-              href="#contact"
-              spy={true}
-              smooth={true}
-              width={"100%"}
-            >
-              Contact
             </Text>
           </MenuItem>
         </MenuList>
