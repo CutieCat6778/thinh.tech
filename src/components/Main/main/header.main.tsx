@@ -1,6 +1,5 @@
 import { Flex, Heading } from "@chakra-ui/react";
 import TypeWriter from "typewriter-effect";
-import { HeaderButton } from "./header/button.header.main";
 import { HeaderText } from "./header/text.header.main";
 
 export function Header() {
@@ -33,9 +32,6 @@ export function Header() {
         />
       </Heading>
       <HeaderText/>
-      <Flex justifyContent={"left"} marginLeft={"50px"}>
-        <HeaderButton/>
-      </Flex>
     </Flex>
   );
 }
