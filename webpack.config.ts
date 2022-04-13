@@ -1,5 +1,5 @@
 import path from "path";
-import { Configuration } from "webpack";
+import { Configuration, DefinePlugin } from "webpack";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as webpackDevServer from "webpack-dev-server";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
@@ -46,6 +46,10 @@ const config: Configuration = {
         new ForkTsCheckerWebpackPlugin({
             async: false,
         }),
+        new DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+            'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL),
+        })
     ],
 };
 
