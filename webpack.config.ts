@@ -1,7 +1,7 @@
 import path from "path";
 import { Configuration } from "webpack";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import * as webpackDevServer from 'webpack-dev-server';
+import * as webpackDevServer from "webpack-dev-server";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 const config: Configuration = {
@@ -24,8 +24,8 @@ const config: Configuration = {
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"]
-            }
+                use: ["style-loader", "css-loader"],
+            },
         ],
     },
     resolve: {
@@ -37,7 +37,7 @@ const config: Configuration = {
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, 'build'),
+            directory: path.join(__dirname, "build"),
         },
         compress: true,
         port: 3000,

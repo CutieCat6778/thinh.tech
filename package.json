@@ -30,7 +30,12 @@
     "axios": "^0.26.1",
     "framer-motion": "^6.2.10",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "workbox-core": "^6.5.3",
+    "workbox-expiration": "^6.5.3",
+    "workbox-precaching": "^6.5.3",
+    "workbox-routing": "^6.5.3",
+    "workbox-strategies": "^6.5.3"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",

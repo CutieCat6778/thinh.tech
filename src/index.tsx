@@ -1,11 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import App from "./app";
-import { register } from "./serviceWorker";
+import { register } from "./serviceWorkerRegistration.";
 
-ReactDOM.render(
-    <App />,
-    document.getElementById("root")
-);
-
-register();
+const container = document.getElementById('root');
+if(container){
+    const root = createRoot(container);
+    root.render(<App />);
+    
+    register();
+}else {
+    new Error("Root not found!");
+}
