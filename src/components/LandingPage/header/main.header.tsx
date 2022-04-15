@@ -58,10 +58,10 @@ export default function Header() {
                             <Text maxW={{base: "18rem", md: "24rem"}} textAlign="left">
                                 a programmer, a web developer, currently a student and lives in Germany!
                             </Text>
-                            <StatusBox />
                         </Flex>
                     </Typist>
                     <Contact/>
+                    <StatusBox />
                 </Box>
                 <Flex
                     justifyContent={{ base: "left", md: "right" }}
