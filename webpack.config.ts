@@ -1,9 +1,9 @@
+import TerserPlugin from 'terser-webpack-plugin';
 import path from "path";
 import { Configuration, DefinePlugin } from "webpack";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as webpackDevServer from "webpack-dev-server";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
-import TerserPlugin from 'terser-webpack-plugin';
 
 const config: Configuration = {
     entry: "./src/index.tsx",
@@ -35,6 +35,7 @@ const config: Configuration = {
     output: {
         path: path.resolve(__dirname, "build"),
         filename: "[name].bundle.js",
+        chunkFilename: "[name].chunk.js"
     },
     devServer: {
         static: {
@@ -55,6 +56,7 @@ const config: Configuration = {
     optimization: {
         minimize: true,
         minimizer: [new TerserPlugin()],
+        runtimeChunk: "multiple",
         splitChunks: {
             chunks: "all",
             cacheGroups: {
@@ -62,7 +64,7 @@ const config: Configuration = {
                     name: "vendors",
                     test: /[\\/]node_modules[\\/]/,
                     enforce: true,
-                    chunks: "initial"
+                    chunks: "initial",
                 },
                 components: {
                     name: "components",
