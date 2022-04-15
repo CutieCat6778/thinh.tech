@@ -1,4 +1,4 @@
-import { ChakraProps, ComponentWithAs, Flex, forwardRef, Heading } from "@chakra-ui/react"
+import { ChakraProps, ComponentWithAs, forwardRef, Heading } from "@chakra-ui/react"
 import { motion, MotionProps } from "framer-motion";
 import React from "react"
 
