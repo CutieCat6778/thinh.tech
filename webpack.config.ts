@@ -47,7 +47,7 @@ const config: Configuration = {
             async: false,
         }),
         new DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
             'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL),
         })
     ],

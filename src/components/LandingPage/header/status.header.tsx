@@ -7,20 +7,18 @@ import { Status } from "../../../interfaces/api";
 export default function StatusBox() {
     const [status, setStatus] = useState<Status | null>(null);
 
-    const dummy = 1;
-
     useEffect(() => {
-        if(!dummy) return;
         async function callApi() {
+            console.log("call")
             const data = await GetStatus();
             if (data) return setStatus(data);
             else return;
         }
+        callApi();
         setInterval(async () => {
             callApi()
         }, 3 * 60 * 1000)
-        callApi();
-    }, [dummy])
+    })
 
     return (
         <>

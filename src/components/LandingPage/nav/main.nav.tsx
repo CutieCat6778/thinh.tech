@@ -1,52 +1,32 @@
-import { Box, Flex, Text } from "@chakra-ui/react"
-import React, { useEffect, useState } from "react"
+import { Box, Flex, Heading, Icon, useColorMode } from "@chakra-ui/react"
+import React from "react"
+import { MdDarkMode, MdLightMode } from "react-icons/md"
+import AsideMobile from "../aside/mobile.aside";
 
 export default function Nav() {
-    const [select, setSelect] = useState<string | null>(null);
 
-    useEffect(() => {
-        if (!select) return setSelect("home");
-    }, [select])
+    const { colorMode, toggleColorMode } = useColorMode();
 
     return (
         <Flex
             flexDir={"row"}
-            justifyContent="space-around"
-            paddingX={{base: "2rem", "lg": "4rem", xl: "8rem", "2xl": "16rem"}}
+            justifyContent={{base: "space-between", md: "left"}}
             fontFamily="comfortaa"
-            marginTop={"1rem"}
+            alignItems={"center"}
+            margin={"1rem"}
             fontSize="1.5rem"
         >
-            <Box>
-                <Text
-                    _hover={{
-                        fontWeight: "600"
-                    }}
-                    onClick={() => {
-                        setSelect("about")
-                    }}
-                    textDecoration={(select == "about" ? "underline" : "none")}>
-                    About
-                </Text>
-            </Box>
-            <Box>
-                <Text
-                    onClick={() => {
-                        setSelect("home")
-                    }}
-                    textDecoration={(select == "home" ? "underline" : "none")}>
-                    Home
-                </Text>
-            </Box>
-            <Box>
-                <Text
-                    onClick={() => {
-                        setSelect("contact")
-                    }}
-                    textDecoration={(select == "contact" ? "underline" : "none")}>
-                    Contact
-                </Text>
-            </Box>
+            <Flex alignItems={"center"}>
+                <Box onClick={() => {
+                    toggleColorMode()
+                }} mr="2rem">
+                    { colorMode === "light" ? <Icon as={MdLightMode} boxSize="2rem"/> :<Icon as={MdDarkMode} boxSize="2rem"/>}
+                </Box>
+                <Heading fontSize={"3xl"}>
+                    Portfolio
+                </Heading>
+            </Flex>
+            <AsideMobile/>
         </Flex>
     )
 }
