@@ -12,7 +12,7 @@ export function Contact() {
     return (
         <Stack
             d={"flex"}
-            justifyContent={"left"}
+            justifyContent={{base: "center", md: "left"}}
             alignItems={"center"}
             userSelect={"none"}
             direction={"row"}

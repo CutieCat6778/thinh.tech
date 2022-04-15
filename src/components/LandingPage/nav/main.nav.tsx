@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Icon, useColorMode } from "@chakra-ui/react"
 import React from "react"
 import { MdDarkMode, MdLightMode } from "react-icons/md"
-import AsideMobile from "../aside/mobile.aside";
+// import AsideMobile from "../aside/mobile.aside";
 
 export default function Nav() {
 
@@ -26,7 +26,7 @@ export default function Nav() {
                     Portfolio
                 </Heading>
             </Flex>
-            <AsideMobile/>
+            {/* <AsideMobile/> */}
         </Flex>
     )
 }

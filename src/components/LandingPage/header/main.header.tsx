@@ -49,13 +49,13 @@ export default function Header() {
                     }}>
                         <Flex
                             mt={"3rem"}
-                            alignItems="left"
-                            flexDir="column"
-                            justifyContent={{ base: "left", md: "center" }}>
-                            <Heading>
-                                Hi, I&apos;m <Text display={"inline"} color="main.red">Thinh</Text>
+                            alignItems={{base: "center", md: "left"}}
+                            flexDir="column" 
+                            justifyContent={{base: "center", md: "left"}}>
+                            <Heading textAlign={{base: "center", md: "left"}} display="block" width={"100%"}>
+                                Hi, I&apos;m <Text display={"inline-block"} color="main.red">Thinh</Text>
                             </Heading>
-                            <Text maxW={{base: "18rem", md: "24rem"}} textAlign="left">
+                            <Text maxW={{base: "18rem", md: "22rem"}} textAlign={{base: "center", md: "left"}} width={"100%"}>
                                 a programmer, a web developer, currently a student and lives in Germany!
                             </Text>
                         </Flex>
@@ -64,7 +64,7 @@ export default function Header() {
                     <StatusBox />
                 </Box>
                 <Flex
-                    justifyContent={{ base: "left", md: "right" }}
+                    justifyContent={{ base: "center", md: "right" }}
                     ref={ref}
                 >
                     <MotionBox

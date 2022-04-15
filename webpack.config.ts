@@ -3,6 +3,7 @@ import { Configuration, DefinePlugin } from "webpack";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as webpackDevServer from "webpack-dev-server";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import TerserPlugin from 'terser-webpack-plugin';
 
 const config: Configuration = {
     entry: "./src/index.tsx",
@@ -51,6 +52,26 @@ const config: Configuration = {
             'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL),
         })
     ],
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()],
+        splitChunks: {
+            chunks: "all",
+            cacheGroups: {
+                vendors: {
+                    name: "vendors",
+                    test: /[\\/]node_modules[\\/]/,
+                    enforce: true,
+                    chunks: "initial"
+                },
+                components: {
+                    name: "components",
+                    test: /[\\/]src[\\/]components[\\/]/,
+                    enforce: true
+                }
+            }
+        }
+    }
 };
 
 export default config;
