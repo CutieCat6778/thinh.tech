@@ -5,6 +5,7 @@ import Footer from "../components/LandingPage/footer/main.footer";
 import FooterMobile from "../components/LandingPage/footer/mobile.footer";
 import Header from "../components/LandingPage/header/main.header";
 import Nav from "../components/LandingPage/nav/main.nav";
+import Section from "../components/LandingPage/section/main.section";
 
 export default function LandingPage() {
     return (
@@ -14,8 +15,9 @@ export default function LandingPage() {
                 {/* <Aside /> */}
                 <Header />
                 <Footer />
-                <FooterMobile/>
             </Flex>
+            <Section/>
+            <FooterMobile/>
         </Flex>
     )
 }

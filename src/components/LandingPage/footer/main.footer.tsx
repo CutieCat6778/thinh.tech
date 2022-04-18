@@ -1,4 +1,4 @@
-import { ChakraProps, ComponentWithAs, forwardRef, Heading } from "@chakra-ui/react"
+import { ChakraProps, ComponentWithAs, forwardRef, Heading, useColorMode } from "@chakra-ui/react"
 import { motion, MotionProps } from "framer-motion";
 import React from "react"
 
@@ -16,6 +16,9 @@ export const MotionBox = motion(
 ) as ComponentWithAs<"div", MotionBoxProps>;
 
 export default function Footer() {
+
+    const { colorMode } = useColorMode();
+    
     return (
         <MotionBox
             initial={{
@@ -28,7 +31,7 @@ export default function Footer() {
             bottom={"50%"}
             right={"-5%"}
             zIndex={-1}
-            opacity={"20%"}
+            opacity={(colorMode == "light" ? "30%" : "20%")}
             display={{base: "none", "md": "block"}}
         />
     )

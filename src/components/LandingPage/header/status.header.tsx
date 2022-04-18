@@ -26,9 +26,9 @@ export default function StatusBox() {
     }, [dummy])
     
     return (
-        <>
+        <Flex width={"100%"} justifyContent="center">
             {
-                status && status.name ? <Flex justifyContent={"center"} maxWidth="16rem" width={"100%"} alignItems="center" margin={"1rem"}>
+                status && status.name ? <Flex justifyContent={"center"} maxWidth="16rem" alignItems="center" margin={"1rem"}>
                     <Image src={status?.image} alt="Spotify Image" height={"5rem"} width="5rem" marginRight={"1rem"} />
                     <Box>
                         <Text fontSize={"0.8rem"}>Playing Spotify</Text>
@@ -38,7 +38,7 @@ export default function StatusBox() {
                     </Box>
                 </Flex> : null
             }
-        </>
+        </Flex>
 
     )
 }
