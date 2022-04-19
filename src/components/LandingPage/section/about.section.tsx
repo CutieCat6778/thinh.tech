@@ -31,8 +31,8 @@ export function AboutBox() {
             </Flex>
             <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_2mp.webp"}
                 display={{ base: "none", xl: "block" }}
-                width="800"
-                height={"500"}
+                width="800px"
+                height={"500px"}
                 alt="Profile picture"
                 borderRadius={"3%"}
                 boxShadow="2xl" />
@@ -40,17 +40,24 @@ export function AboutBox() {
                 display={{ base: "none", lg: "block", xl: "none" }}
                 alt="Profile picture"
                 borderRadius={"3%"}
-                boxShadow="2xl" />
+                boxShadow="2xl" 
+                width={"600px"}
+                height="400px"/>
+                
             <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_480_320.webp"}
                 display={{ base: "none", md: "block", lg: "none" }}
                 alt="Profile picture"
                 borderRadius={"3%"}
-                boxShadow="2xl" />
+                boxShadow="2xl"
+                width={"480px"}
+                height={"320px"} />
             <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_320_233.webp"}
                 display={{ base: "block", md: "none"}}
                 alt="Profile picture"
                 borderRadius={"3%"}
-                boxShadow="2xl" />
+                boxShadow="2xl"
+                width={"320px"}
+                height="233px"/>
         </Flex>
     )
 }
