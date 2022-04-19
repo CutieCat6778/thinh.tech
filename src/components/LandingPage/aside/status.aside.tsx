@@ -14,7 +14,8 @@ function Timeconverter(timeRaw: number) {
     const time = Math.floor(timeRaw / 1000);
     const minuteRaw = Math.floor(time / 60);
     const minute = minuteRaw > 9 ? minuteRaw : `0${minuteRaw}`;
-    const second = Math.floor(time % 60);
+    const secondRaw = Math.floor(time % 60);
+    const second = secondRaw > 9 ? secondRaw : `0${secondRaw}`;
     return `${minute}:${second}`
 }
 
@@ -35,10 +36,10 @@ function Range({ timestamp, duration }: RangeType) {
                 height="0.8rem"
                 disabled />
             <Flex width={"100%"} alignItems="center" justifyContent={"space-between"}>
-                <Text fontSize={"smaller"}>
+                <Text fontSize={"1rem"}>
                     {Timeconverter(now - timestamp)}
                 </Text>
-                <Text fontSize={"smaller"}>
+                <Text fontSize={"1rem"}>
                     {Timeconverter(duration)}
                 </Text>
             </Flex>

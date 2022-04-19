@@ -14,7 +14,7 @@ export default function Aside() {
         <Flex zIndex={1} height="100%" m={"1rem"} display={{base: "none", md: "block"}}>
             <Popover isLazy>
                 <PopoverTrigger>
-                    <Spotify boxSize="2rem" color="#1DB954"/>
+                    <Spotify boxSize="2rem" color="#1DB954" position={"fixed"} />
                 </PopoverTrigger>
                 <PopoverContent
                     border={"none"}

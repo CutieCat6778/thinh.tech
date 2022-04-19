@@ -11,7 +11,7 @@ const Spotify = forwardRef((props, ref) => {
 
 export default function AsideMobile() {
     return (
-        <Flex zIndex={1} height="100%" m={"1rem"} display={{base: "block", md: "none"}}>
+        <Flex zIndex={1} height="100%" m={"1rem"} marginLeft="auto">
             <Popover isLazy>
                 <PopoverTrigger>
                     <Spotify boxSize="2rem" color="#1DB954"/>
