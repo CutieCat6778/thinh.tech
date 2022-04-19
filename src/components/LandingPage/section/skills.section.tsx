@@ -20,10 +20,10 @@ export const TextLinkBox: FC<TextLink> = ({ text, url }) => {
     return (
         <Link href={url} alignItems="center">
             <Flex>
-                <Text mr="1rem">
+                <Text mr="0.5rem">
                     {text}
                 </Text>
-                <LinkIcon/>
+                <LinkIcon boxSize={"0.8rem"}/>
             </Flex>
         </Link>
     )
