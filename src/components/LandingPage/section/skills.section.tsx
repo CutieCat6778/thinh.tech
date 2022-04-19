@@ -16,7 +16,7 @@ export const MotionBox = motion(
     })
 ) as ComponentWithAs<"div", MotionBoxProps>;
 
-const TextLinkBox: FC<TextLink> = ({ text, url }) => {
+export const TextLinkBox: FC<TextLink> = ({ text, url }) => {
     return (
         <Link href={url} alignItems="center">
             <Flex>

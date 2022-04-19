@@ -1,6 +1,5 @@
 import { Box, ChakraProps, ComponentWithAs, Flex, forwardRef, Heading, Image, Text } from "@chakra-ui/react"
 import React from "react"
-import StatusBox from "./status.header"
 import Typist from 'react-typist'
 import { motion, MotionProps, useAnimation, useMotionValue, useTransform } from "framer-motion"
 import { useInView } from "react-intersection-observer"
@@ -61,7 +60,6 @@ export default function Header() {
                         </Flex>
                     </Typist>
                     <Contact/>
-                    <StatusBox />
                 </Box>
                 <Flex
                     justifyContent={{ base: "center", md: "right" }}
@@ -69,10 +67,12 @@ export default function Header() {
                 >
                     <MotionBox
                         initial={{
-                            x: 100
+                            x: 100,
+                            z: -1,
                         }}
                         animate={animationControl}
                         style={{ x, opacity }}
+                        zIndex={-1}
                     />
                 </Flex>
             </Flex>
