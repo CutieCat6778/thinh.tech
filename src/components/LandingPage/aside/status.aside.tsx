@@ -10,6 +10,11 @@ interface RangeType {
     duration: number;
 }
 
+// interface NewStatus {
+//     estimatedEnds: number;
+//     timestamp: number;
+// }
+
 function Timeconverter(timeRaw: number) {
     const time = Math.floor(timeRaw / 1000);
     const minuteRaw = Math.floor(time / 60);
@@ -21,8 +26,6 @@ function Timeconverter(timeRaw: number) {
 
 function Range({ timestamp, duration }: RangeType) {
     const now = new Date().getTime();
-
-    console.log(duration, now - timestamp)
 
     return (
         <Flex flexDir={"column"} alignItems="center" justifyContent={"center"} width="100%">
@@ -55,17 +58,38 @@ export default function StatusBox() {
     useEffect(() => {
         if (!dummy) return;
         async function callApi() {
-            console.log("call")
             const data = await GetStatus();
-            console.log(data);
-            if (data) return setStatus(data);
+            if (data) {
+                data.estimatedEnds = data.timestamp + data.duration;
+                return setStatus(data);
+            }
             else return;
         }
-        callApi();
-        setInterval(async () => {
-            callApi()
-        }, 3 * 60 * 1000)
-    }, [dummy])
+        // function updateTimer() {
+        //     if (status?.estimatedEnds && status.timestamp) {
+        //         const now = new Date().getTime()
+        //         const newStatus: NewStatus = {
+        //             estimatedEnds: status?.estimatedEnds,
+        //             timestamp: status?.timestamp
+        //         };
+        //         if (newStatus) {
+        //             if (now >= newStatus.estimatedEnds) return callApi();
+        //             newStatus.timestamp = now;
+        //             console.log(newStatus.timestamp);
+        //             setStatus({
+        //                 image: status.image,
+        //                 timestamp: newStatus.timestamp,
+        //                 duration: status.duration,
+        //                 name: status.name,
+        //                 isPlaying: status.isPlaying,
+        //                 estimatedEnds: status.estimatedEnds,
+        //                 url: status.url,
+        //             });
+        //         }
+        //     }
+        // }
+        if(!status) callApi();
+    }, [dummy, status])
 
     return (
         status && status.name ?
@@ -83,7 +107,7 @@ export default function StatusBox() {
                     <Box my={"1rem"}>
                         <Text fontSize={"0.8rem"}>Playing Spotify</Text>
                         <Heading fontSize={"auto"} >
-                            <TextLinkBox text={status?.name} url={status.url.spotify}/>
+                            <TextLinkBox text={status?.name} url={status.url.spotify} />
                         </Heading>
                     </Box>
                     <Range timestamp={status.timestamp} duration={status.duration} />
