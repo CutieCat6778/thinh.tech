@@ -1,12 +1,12 @@
 import { Box, Flex, forwardRef, Popover, PopoverContent, PopoverTrigger } from "@chakra-ui/react"
 import React from "react"
-import { BsSpotify } from "react-icons/bs"
+import { Spotify } from "./icon.aside"
 import StatusBox from "./status.aside"
 
-const Spotify = forwardRef((props, ref) => {
+const SpotifyIcon = forwardRef((props, ref) => {
     return (
         <Box ref={ref} {...props}>
-            <BsSpotify />
+            <Spotify />
         </Box>
     )
 })
@@ -16,7 +16,7 @@ export default function AsideMobile() {
         <Flex zIndex={1} height="100%" m={"1rem"} marginLeft="auto">
             <Popover isLazy>
                 <PopoverTrigger>
-                    <Spotify color="#1DB954" fontSize="2rem"/>
+                    <SpotifyIcon color="#1DB954" fontSize="2rem"/>
                 </PopoverTrigger>
                 <PopoverContent
                     border={"none"}

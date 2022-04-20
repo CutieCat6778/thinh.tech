@@ -1,6 +1,6 @@
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Box, Flex, Heading, Icon, useColorMode } from "@chakra-ui/react"
 import React from "react"
-import { MdDarkMode, MdLightMode } from "react-icons/md"
 import AsideMobile from "../aside/mobile.aside";
 
 export default function Nav() {
@@ -20,7 +20,7 @@ export default function Nav() {
                 <Box onClick={() => {
                     toggleColorMode()
                 }} mr="2rem">
-                    { colorMode === "light" ? <Icon as={MdLightMode} boxSize="2rem"/> :<Icon as={MdDarkMode} boxSize="2rem"/>}
+                    { colorMode === "light" ? <MoonIcon boxSize="2rem"/> :<SunIcon boxSize="2rem"/>}
                 </Box>
                 <Heading fontSize={"3xl"}>
                     Portfolio

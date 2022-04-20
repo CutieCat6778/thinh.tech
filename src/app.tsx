@@ -1,5 +1,4 @@
 import "@fontsource/comfortaa"
-import "@fontsource/space-mono"
 import "@fontsource/bebas-neue"
 import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
