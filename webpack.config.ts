@@ -43,6 +43,12 @@ const config: Configuration = {
         compress: true,
         port: 3000,
     },
+    plugins: [
+        new DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+            'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL),
+        })
+    ],
     optimization: {
         minimize: true,
         minimizer: [new TerserPlugin()],
