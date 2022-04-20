@@ -4,6 +4,7 @@ const breakpoints = {
     sm: "30em",
     "2sm": "44em",
     md: "48em",
+    "2md": "56em",
     lg: "62em",
     "2lg": "72em",
     xl: "80em",

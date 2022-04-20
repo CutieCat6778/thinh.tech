@@ -18,7 +18,7 @@ export function AboutBox() {
     return (
         <Flex justifyContent={"space-around"}
             alignItems="center"
-            flexDir={{ base: "column", "lg": "row" }}
+            flexDir={{ base: "column", "2md": "row" }}
             width="100%"
             mb="5rem">
             <Flex flexDir={"column"} padding="3rem">
@@ -35,29 +35,32 @@ export function AboutBox() {
                 height={"500px"}
                 alt="Profile picture"
                 borderRadius={"3%"}
-                boxShadow="2xl" />
+                boxShadow="2xl"
+                loading="lazy"/>
             <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_600_400.webp"}
                 display={{ base: "none", lg: "block", xl: "none" }}
                 alt="Profile picture"
                 borderRadius={"3%"}
                 boxShadow="2xl" 
                 width={"600px"}
+                loading="lazy"
                 height="400px"/>
-                
             <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_480_320.webp"}
                 display={{ base: "none", md: "block", lg: "none" }}
                 alt="Profile picture"
                 borderRadius={"3%"}
                 boxShadow="2xl"
                 width={"480px"}
+                loading="lazy"
                 height={"320px"} />
             <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_320_233.webp"}
                 display={{ base: "block", md: "none"}}
                 alt="Profile picture"
                 borderRadius={"3%"}
                 boxShadow="2xl"
-                width={"320px"}
-                height="233px"/>
+                width={"60vw"}
+                loading="lazy"
+                height="40vw"/>
         </Flex>
     )
 }
