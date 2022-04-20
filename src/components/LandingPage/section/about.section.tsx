@@ -29,7 +29,7 @@ export function AboutBox() {
                     Since I was a kid, I&apos;ve been fascinated with technology. I can spend all day just learning about it. As I went to school, my passion for technology gained more momentum, and I am eager to develop my interest further.
                 </Text>
             </Flex>
-            <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_2mp.webp"}
+            <Image src={"https://cdn.thinh.tech/portfolio/about_2mp.webp"}
                 display={{ base: "none", xl: "block" }}
                 width="800px"
                 height={"500px"}
@@ -37,7 +37,7 @@ export function AboutBox() {
                 borderRadius={"3%"}
                 boxShadow="2xl"
                 loading="lazy"/>
-            <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_600_400.webp"}
+            <Image src={"https://cdn.thinh.tech/portfolio/about_600_400.webp"}
                 display={{ base: "none", lg: "block", xl: "none" }}
                 alt="Profile picture"
                 borderRadius={"3%"}
@@ -45,7 +45,7 @@ export function AboutBox() {
                 width={"600px"}
                 loading="lazy"
                 height="400px"/>
-            <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_480_320.webp"}
+            <Image src={"https://cdn.thinh.tech/portfolio/about_480_320.webp"}
                 display={{ base: "none", md: "block", lg: "none" }}
                 alt="Profile picture"
                 borderRadius={"3%"}
@@ -53,7 +53,7 @@ export function AboutBox() {
                 width={"480px"}
                 loading="lazy"
                 height={"320px"} />
-            <Image src={"https://cutiecat6778.github.io/cdn/portfolio/about_320_233.webp"}
+            <Image src={"https://cdn.thinh.tech/portfolio/about_320_233.webp"}
                 display={{ base: "block", md: "none"}}
                 alt="Profile picture"
                 borderRadius={"3%"}

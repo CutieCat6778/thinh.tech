@@ -14,7 +14,7 @@ export type MotionBoxProps = Omit<ChakraProps, keyof MotionProps> &
 export const MotionBox = motion(
     forwardRef<ChakraProps, "div">((props, ref) => {
         return (
-            <Image ref={ref} {...props} src="https://cutiecat6778.github.io/cdn/portfolio/pfp_512.webp" borderRadius={{ base: "2%", md: "100%" }} width={{base: "20rem", md: "28vw"}} height={{base: "20rem", md: "28vw"}} alt="Profile picture" />
+            <Image ref={ref} {...props} src="https://cdn.thinh.tech/portfolio/pfp_512.webp" borderRadius={{ base: "2%", md: "100%" }} width={{base: "20rem", md: "28vw"}} height={{base: "20rem", md: "28vw"}} alt="Profile picture" />
         );
     })
 ) as ComponentWithAs<"div", MotionBoxProps>;
