@@ -46,7 +46,7 @@ const config: Configuration = {
     plugins: [
         new DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-            'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL),
+            'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL || 'https://www.thinh.tech'),
         })
     ],
     optimization: {

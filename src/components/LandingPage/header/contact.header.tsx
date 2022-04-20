@@ -10,9 +10,6 @@ import { Instagram, Github, Facebook, Mail } from "./icons.header";
 
 export function Contact() {
     const { colorMode } = useColorMode();
-
-    console.log(colorMode);
-
     return (
         <Stack
             d={"flex"}
