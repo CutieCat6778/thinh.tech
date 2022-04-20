@@ -1,7 +1,7 @@
 import TerserPlugin from 'terser-webpack-plugin';
 import path from "path";
 import { Configuration, DefinePlugin } from "webpack";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+//eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as webpackDevServer from "webpack-dev-server";
 
 const config: Configuration = {
@@ -45,8 +45,8 @@ const config: Configuration = {
     },
     plugins: [
         new DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-            'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL || 'https://www.thinh.tech'),
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || "production"),
+            'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL || "https://www.thinh.tech")
         })
     ],
     optimization: {
@@ -55,6 +55,7 @@ const config: Configuration = {
         runtimeChunk: "multiple",
         splitChunks: {
             chunks: "all",
+            name: "vendors",
             cacheGroups: {
                 chakra: {
                     name: "chakra",
@@ -68,15 +69,15 @@ const config: Configuration = {
                     enforce: true,
                     chunks: "initial",
                 },
-                react_dom: {
-                    name: "react-dom",
-                    test: /[\\/]node_modules[\\/]react-dom[\\/]/,
+                emotion: {
+                    name: "emotion",
+                    test: /[\\/]node_modules[\\/]@emotion[\\/]/,
                     enforce: true,
                     chunks: "initial",
                 },
-                vendors: {
-                    name: "vendors",
-                    test: /[\\/]node_modules[\\/]/,
+                react_dom: {
+                    name: "react-dom",
+                    test: /[\\/]node_modules[\\/]react-dom[\\/]/,
                     enforce: true,
                     chunks: "initial",
                 },
@@ -90,4 +91,4 @@ const config: Configuration = {
     }
 };
 
-export default config;
+export default config; 
