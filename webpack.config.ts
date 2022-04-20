@@ -3,7 +3,6 @@ import path from "path";
 import { Configuration, DefinePlugin } from "webpack";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as webpackDevServer from "webpack-dev-server";
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const config: Configuration = {
     entry: "./src/index.tsx",
@@ -44,9 +43,6 @@ const config: Configuration = {
         compress: true,
         port: 3000,
     },
-    plugins: [
-        new BundleAnalyzerPlugin()
-    ],
     optimization: {
         minimize: true,
         minimizer: [new TerserPlugin()],
