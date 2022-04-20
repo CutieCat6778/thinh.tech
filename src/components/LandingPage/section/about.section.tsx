@@ -21,7 +21,7 @@ export function AboutBox() {
             flexDir={{ base: "column", "2md": "row" }}
             width="100%"
             mb="5rem">
-            <Flex flexDir={"column"} padding="3rem">
+            <Flex flexDir={"column"} padding={{base: "1rem", "2md": "3rem"}}>
                 <Heading>
                     Story about me
                 </Heading>
@@ -59,6 +59,9 @@ export function AboutBox() {
                 borderRadius={"3%"}
                 boxShadow="2xl"
                 width={"60vw"}
+                minW={"300px"}
+                minH={"200px"}
+                objectFit="cover"
                 loading="lazy"
                 height="40vw"/>
         </Flex>

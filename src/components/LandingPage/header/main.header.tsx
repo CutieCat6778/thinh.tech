@@ -73,6 +73,7 @@ export default function Header() {
                         animate={animationControl}
                         style={{ x, opacity }}
                         zIndex={-1}
+                        boxShadow="2xl"
                     />
                 </Flex>
             </Flex>
