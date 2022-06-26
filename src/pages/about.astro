@@ -1,0 +1,61 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Footer from '../components/Footer/index.jsx';
+import Nav from '../components/Nav/index.jsx';
+---
+
+<html lang="en">
+	<head>
+		<MainHead title="About | Jeanine White" description="About Jeanine White Lorem Ipsum" />
+		<style lang="scss">
+			.heroImg {
+				object-fit: cover;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.bio {
+				font-size: var(--f-u1);
+				line-height: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<Nav />
+		<div class="wrapper">
+			<h1>About Thinh</h1>
+			<div class="heroImg">
+				<img width="1400" height="350" src={import.meta.env.CDN+"about/about.webp"} />
+			</div>
+			<div class="bio wrapper wrapper__readable mt8">
+				<p>
+					Borned in Ha Tinh, Vietnam, in a poor growing country. I have learned how is the hard life there,learned how hard people had to work for a better a life!
+					Asian parent teaches their kids really strict, since I was a child, never had chance to touch a smart-device! But I still managed to learn new things from
+					olds device and sometime scramble them and look at the electronics inside them :D
+				</p>
+
+				<img src={import.meta.env.CDN+"about/family-min.webp"}/>
+
+				<p>
+					When the life have gotten better, I have moved to Europe, Bulgaria. Move to a another country, another culture. My eyes have opened really wide, I saw how the life
+					in a modern europe country is. Their culture, the life and so more are really diffrent! The "slawen" language is really interesting for me. They are lovely people ♥
+				</p>
+
+				<img src={import.meta.env.CDN+"about/bulgaria.webp"}/>
+
+				<p>
+					After a few years, we had a chance to move to eastern europe, where the economy are much better. We have moved to Germany and my eyes had to open wider, the people there,
+					the culture and aspecially the economy. They live a very peaceful life, but our family doesn't. They had to work from early morning to late evening, just to have money and
+					give me a good life. Our life standart have changed, we had a car and a beautiful house. Until now, I can't ask anything more :D
+				</p>
+
+				<img src={import.meta.env.CDN+"about/germany.webp"}/>
+
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>
