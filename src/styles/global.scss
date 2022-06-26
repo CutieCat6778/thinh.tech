@@ -4,6 +4,7 @@
 	--c-black: #05091e;
 	--c-blue: #46b4ff;
 	--c-gray: #90aab7;
+	--c-light-white:rgb(225, 225, 225);
 	--c-green: #9ef2cb;
 	--c-pink: #ffb8d9;
 	--c-orange: #ffb7a3;
@@ -60,7 +61,7 @@
 body {
 	margin: 0;
 	color: var(--t-fg);
-	font-family: 'Inter', 'system-ui', sans-serif;
+	font-family: 'Comfortaa', 'Inter', 'system-ui', sans-serif;
 }
 
 * {
@@ -148,6 +149,20 @@ $colors: 'black', 'blue', 'white';
 }
 .tar {
 	text-align: right;
+}
+
+.c-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.r-flex {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 // wrapper

@@ -13,6 +13,9 @@ function Nav() {
 			<a className={Styles.link} href="/about">
 				About
 			</a>
+			<a className={Styles.link} href="/link">
+				Links
+			</a>
 			<a className={Styles.social} href="https://twitter.com/CutieCat_6778">
 				<span className={Styles.span}>twitter</span>
 				<svg className={Styles.socialicon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
