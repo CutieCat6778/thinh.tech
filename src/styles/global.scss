@@ -157,6 +157,11 @@ $colors: 'black', 'blue', 'white';
 	margin-right: auto;
 	padding-left: 2rem;
 	padding-right: 2rem;
+
+	@media (max-width: 750px) {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
 }
 .wrapper__readable {
 	max-width: 50em;
