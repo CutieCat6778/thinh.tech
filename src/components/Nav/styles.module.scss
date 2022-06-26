@@ -13,8 +13,12 @@
 	text-decoration: none;
 }
 
+.span {
+	display: none;
+}
+
 .link {
-	color: var(--t-subdue);
+	color: var(--t-fg);
 	display: block;
 	margin-left: 1rem;
 	text-decoration: none;
@@ -22,6 +26,7 @@
 	text-transform: uppercase;
 	padding-top: 0.75em;
 	padding-bottom: 0.75em;
+	font-weight: 560;
 
 	&:focus,
 	&:hover {
@@ -54,9 +59,9 @@
 
 .socialicon {
 	display: block;
-	width: 1.25rem;
-	height: 1.25rem;
-	fill: var(--t-subdue);
+	width: 1.75rem;
+	height: 1.75rem;
+	fill: var(--t-fg);
 	transition: fill linear 150ms;
 
 	&:hover {
