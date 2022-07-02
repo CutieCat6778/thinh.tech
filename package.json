@@ -12,7 +12,6 @@
     "@astrojs/preact": "^0.2.0",
     "@astrojs/sitemap": "^0.2.4",
     "astro": "^1.0.0-beta.54",
-    "astro-compress": "^0.0.12",
     "astro-robots-txt": "^0.3.6",
     "sass": "^1.52.2"
   },

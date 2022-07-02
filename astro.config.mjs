@@ -4,8 +4,6 @@ import vercel from '@astrojs/vercel/static';
 import sitemap from "@astrojs/sitemap";
 import robots from "astro-robots-txt";
 
-import compress from "astro-compress";
-
 // https://astro.build/config
 export default defineConfig({
   adapter: vercel(),
@@ -27,5 +25,5 @@ export default defineConfig({
   ), robots({
     host: "www.thinh.tech",
     sitemap: ['https://www.thinh.tech/sitemap.xml']
-  }), compress()]
+  })]
 });
