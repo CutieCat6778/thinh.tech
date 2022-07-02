@@ -1,9 +1,20 @@
 import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
-import vercel from '@astrojs/vercel/static'
+import vercel from '@astrojs/vercel/static';
+import sitemap from "@astrojs/sitemap";
+import robots from "astro-robots-txt";
+
+import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-	adapter: vercel(),
-	integrations: [preact()],
+  adapter: vercel(),
+  site: "https://www.thinh.tech",
+  experimental: {
+    integrations: true
+  },
+  integrations: [preact(), sitemap(), robots({
+    host: "www.thinh.tech",
+    sitemap: ['https://www.thinh.tech/sitemap.xml']
+  }), compress()]
 });
