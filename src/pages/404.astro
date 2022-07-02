@@ -7,13 +7,17 @@ import Nav from '../components/Nav/index.jsx';
 <html lang="en">
 	<head>
 		<MainHead title="Not Found" />
+		<style>
+			.section {
+				height: 10vh;
+			}
+		</style>
 	</head>
 	<body>
-		<nav />
-		<div class="wrapper mt4 mb4">
-			<h1>Page Not Found</h1>
-			<p>Not found</p>
-		</div>
-		<footer />
+		<Nav />
+		<section class="section tac">
+			<h1>Page not found!</h1>
+			<span>Status code: 404</span>
+		</section>
 	</body>
 </html>
