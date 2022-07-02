@@ -13,7 +13,18 @@ export default defineConfig({
   experimental: {
     integrations: true
   },
-  integrations: [preact(), sitemap(), robots({
+  integrations: [preact(), sitemap(
+    {
+      customPages: [
+        "https://www.thinh.tech/link",
+        "https://www.thinh.tech/project",
+        "https://www.thinh.tech/about",
+        "https://www.thinh.tech/404",
+        "https://www.thinh.tech/project/the-beginn",
+        "https://www.thinh.tech/project/moddy",
+      ]
+    }
+  ), robots({
     host: "www.thinh.tech",
     sitemap: ['https://www.thinh.tech/sitemap.xml']
   }), compress()]
