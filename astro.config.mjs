@@ -14,7 +14,7 @@ export default defineConfig({
     integrations: true
   },
   integrations: [preact(), sitemap({
-    customPages: ["https://www.thinh.tech/link", "https://www.thinh.tech/project", "https://www.thinh.tech/about", "https://www.thinh.tech/404", "https://www.thinh.tech/project/the-beginn", "https://www.thinh.tech/project/moddy"]
+    customPages: ["https://www.thinh.tech/link", "https://www.thinh.tech/projects", "https://www.thinh.tech/about", "https://www.thinh.tech/404", "https://www.thinh.tech/project/the-beginn", "https://www.thinh.tech/project/moddy"]
   }), robots({
     host: "www.thinh.tech",
     sitemap: ['https://www.thinh.tech/sitemap-index.xml']
