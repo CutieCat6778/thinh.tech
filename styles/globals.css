@@ -1,0 +1,24 @@
+// Initial setup
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, Comfortaa, Silkscreen;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#__next {
+  height: 100%;
+  width: 100%;
+  background-color: #52796f;
+  margin: 0;
+  color: white;
+  font-family: silkscreen;
+}
