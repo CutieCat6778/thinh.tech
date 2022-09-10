@@ -5,7 +5,7 @@ import { ResolveImage } from "../../../utils/utils";
 
 export default function Timeline() {
   return (
-    <Box width={"100%"}>
+    <Box width={"100%"} p="1rem">
       <Moddy />
       <Helios />
     </Box>
@@ -35,9 +35,9 @@ function Moddy() {
           user to control their community via a simple commmand. It has many
           integrated APIs and utility functions. Currently it is out-dated and
           only support discord.js@12.x.x which is outdated
-          <Box mt="1rem">
+          <Box mt="1rem" color="black">
             <Link href="https://github.com/CutieCat6778/moddy-djs">
-              <Button variant={"link"} minW="100px">
+              <Button variant={"link"} minW="100px" color="black">
                 <Image
                   src={ResolveImage("icon/github.svg", 32, 32)}
                   height="32px"
@@ -48,7 +48,7 @@ function Moddy() {
               </Button>
             </Link>
             <Link href="https://moddy.js.org">
-              <Button variant={"link"} ml="1rem" minW="100px">
+              <Button variant={"link"} ml="1rem" minW="100px" color="black">
                 <Image
                   src={ResolveImage("icon/browser.svg", 32, 32)}
                   height="32px"
@@ -73,7 +73,6 @@ function Helios() {
       width="100%"
       mt="7vw"
       flexDir={{ base: "column", lg: "row" }}
-      p="1rem"
     >
       <Image
         src={ResolveImage("icon/helios.png", 300, 166.66)}
@@ -90,15 +89,15 @@ function Helios() {
           there as a Systemadminsitator, from there I have learned about Server,
           Networking and Office structure. I also learned how to setup a server
           and operating system, setting up a web application with kubernetes.
-          <Box mt="1rem">
+          <Box mt="1rem" color="black">
             <Link href="https://www.heliosventilatoren.de/de/">
-              <Button variant={"link"} ml="1rem" minW="100px">
+              <Button variant={"link"} ml="1rem" minW="100px" color="black">
                 <Image
                   src={ResolveImage("icon/browser.svg", 32, 32)}
                   height="32px"
                   width="32px"
                   alt="Github logo"
-                />{" "}
+                />
                 Website
               </Button>
             </Link>

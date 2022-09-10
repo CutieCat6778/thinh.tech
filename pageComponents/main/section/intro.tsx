@@ -65,17 +65,17 @@ function Intro() {
       </Box>
       <Flex
         maxWidth={"500px"}
-        ml="3rem"
+        ml={{base: 0, lg: "3rem"}}
         flexDir={"column"}
-        alignItems="left"
+        alignItems={{base: "center", lg: "left"}}
         justifyContent={"center"}
       >
-        <Heading textAlign={"left"}>Thinh Nguyen, Student</Heading>
+        <Heading textAlign={{base: "center", lg: "left"}}>Thinh Nguyen, Student</Heading>
         <Box
           fontFamily={"Pt Serif"}
           fontWeight="500"
           mt="1rem"
-          textAlign={"left"}
+          textAlign={{base: "center", lg: "left"}}
         >
           Hi there, this is my personal website. With this website, I can
           introduce my self to you, so you can understand better.
@@ -84,14 +84,14 @@ function Intro() {
           </Text>
           <Box mt="1rem">
             <Heading fontSize="lg">Contact:</Heading>
-            <Box py="1rem" width={"50%"}>
+            <Flex py="1rem" width={"100%"} justifyContent={{base: "center", lg: "left"}}>
               <Button fontFamily={"Comfortaa"}>
                 <Link href="mailto:thinh@thinh.tech">Email</Link>
               </Button>
               <Button fontFamily={"Comfortaa"} ml="1rem">
                 <Link href="https://instagram.com/txzje">Instagram</Link>
               </Button>
-            </Box>
+            </Flex>
           </Box>
         </Box>
       </Flex>
