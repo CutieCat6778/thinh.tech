@@ -2,27 +2,26 @@ import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, RefObject, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import FramerBox from "../../components/framerbox";
 import { ResolveImage } from "../../utils/utils";
 
 export default function Section() {
-  const rootRef = useRef(null);
-
   return (
-    <Box width={"100%"} mt="5vw" ref={rootRef}>
-      <IntroBox rootRef={rootRef} />
+    <Box width={"100%"} mt="5vw">
+      <IntroBox />
     </Box>
   );
 }
 
-interface IntroBoxType {
-  rootRef: RefObject<Element>;
-}
-
-const IntroBox: FC<IntroBoxType> = ({ rootRef }) => {
+const IntroBox = () => {
+  const [inView, setInView] = useState(true);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, root: rootRef });
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    setInView(isInView);
+  }, [isInView])
 
   return (
     <FramerBox
@@ -39,6 +38,7 @@ const IntroBox: FC<IntroBoxType> = ({ rootRef }) => {
       transition={{
         duration: 1,
         ease: "easeInOut",
+        delay: 1,
       }}
     >
       <Intro />
@@ -67,7 +67,7 @@ function Intro() {
           justifyContent={"center"}
         >
           <Heading textAlign={"left"}>Thinh Nguyen, Student</Heading>
-          <Text
+          <Box
             fontFamily={"Pt Serif"}
             fontWeight="500"
             mt="1rem"
@@ -89,7 +89,7 @@ function Intro() {
                 </Button>
               </Box>
             </Box>
-          </Text>
+          </Box>
         </Flex>
       </Flex>
     </Flex>

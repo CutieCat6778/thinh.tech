@@ -9,23 +9,37 @@ import { ResolveImage } from "../../utils/utils";
 export default function Header() {
   let [width, setWidth] = useState(0);
   let [height, setHeight] = useState(0);
-  let [inView, setInView] = useState(true);
 
   const rootRef = useRef(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, root: rootRef });
 
   useEffect(() => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight + 10);
-    setInView(isInView);
-  }, [isInView]);
+    function handleResize(height: number, width: number) {
+      // Set window width/height to state
+      setWidth(width);
+      setHeight(height + 10);
+    }
+
+    window.addEventListener("resize", () =>
+      handleResize(window.innerHeight, window.innerWidth)
+    );
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize(window.innerHeight, window.innerWidth);
+
+    // Remove event listener on cleanup
+    return () =>
+      window.removeEventListener("resize", () =>
+        handleResize(window.innerHeight, window.innerWidth)
+      );
+  });
 
   return (
     <Box width="100%" height={height} color="white">
       <Box position="absolute" zIndex={-1} height="100%" width={"auto"}>
         <Image
-          src={ResolveImage("v2/backgrounds/1.jpg", width, height)}
+          src={ResolveImage(`v2/backgrounds/${Math.round(Math.random() * 4)}.jpg`, width, height)}
           width={width}
           height={height}
           alt="Banner image"
@@ -75,7 +89,7 @@ export default function Header() {
         <FramerBox
           ref={rootRef}
           animate={
-            inView
+            isInView
               ? {
                   scale: [1, 2, 2, 1, 1],
                   y: [
