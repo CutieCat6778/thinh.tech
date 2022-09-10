@@ -39,7 +39,11 @@ export default function Header() {
     <Box width="100%" height={height} color="white">
       <Box position="absolute" zIndex={-1} height="100%" width={"auto"}>
         <Image
-          src={ResolveImage(`v2/backgrounds/${Math.round(Math.random() * 4)}.jpg`, width, height)}
+          src={ResolveImage(
+            `v2/backgrounds/${Math.round(Math.random() * 4)}.jpg`,
+            width,
+            height
+          )}
           width={width}
           height={height}
           alt="Banner image"
