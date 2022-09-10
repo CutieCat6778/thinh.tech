@@ -52,6 +52,7 @@ export default function Header() {
         />
       </Box>
       <Flex
+        zIndex={600}
         width={"100%"}
         height="100%"
         justifyContent={"space-between"}
