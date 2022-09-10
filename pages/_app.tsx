@@ -3,7 +3,10 @@ import type { AppProps } from 'next/app'
 import Head from "next/head"
 import { ResolveImage } from "../utils/utils"
 import "@fontsource/comfortaa"
-import "@fontsource/silkscreen"
+import "@fontsource/pt-serif"
+import "@fontsource/open-sans"
+import { ChakraProvider, CSSReset } from '@chakra-ui/react'
+import { theme } from "../utils/theme"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -19,7 +22,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/windows11/Square44x44Logo.scale-100.png"/>
         <link rel="manifest" href="/manifest.webmanifest"/>
       </Head>
-      <Component {...pageProps} />
+      <ChakraProvider theme={theme}>
+        <CSSReset/>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   )
 }

@@ -1,11 +1,12 @@
+import { Box } from "@chakra-ui/react"
 import Header from "./header"
-import Nav from "./nav"
+import Section from "./section"
 
 export default function Main() {
   return (
-    <div>
-      <Nav/>
+    <Box height="100%" width="100%">
       <Header/>
-    </div>
+      <Section/>
+    </Box>
   )
 }
