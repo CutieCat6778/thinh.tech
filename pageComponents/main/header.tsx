@@ -20,19 +20,8 @@ export default function Header() {
       setWidth(width);
       setHeight(height + 10);
     }
-
-    window.addEventListener("resize", () =>
-      handleResize(window.innerHeight, window.innerWidth)
-    );
-
     // Call handler right away so state gets updated with initial window size
     handleResize(window.innerHeight, window.innerWidth);
-
-    // Remove event listener on cleanup
-    return () =>
-      window.removeEventListener("resize", () =>
-        handleResize(window.innerHeight, window.innerWidth)
-      );
   });
 
   return (
