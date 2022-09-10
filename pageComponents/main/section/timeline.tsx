@@ -5,7 +5,7 @@ import { ResolveImage } from "../../../utils/utils";
 
 export default function Timeline() {
   return (
-    <Box>
+    <Box width={"100%"}>
       <Moddy />
       <Helios />
     </Box>
@@ -15,10 +15,10 @@ export default function Timeline() {
 function Moddy() {
   return (
     <Flex
-      justifyContent="left"
+      justifyContent="center"
       alignItems="center"
       width="100%"
-      flexDir={"row-reverse"}
+      flexDir={{ base: "column", lg: "row-reverse" }}
     >
       <Image
         src={ResolveImage("moddy/moddy.png", 300, 300)}
@@ -27,7 +27,7 @@ function Moddy() {
         alt="Moddy profile picture"
         style={{ borderRadius: "10%" }}
       />
-      <Box mr="5rem" textAlign={"left"}>
+      <Box mr={{base: "0", lg: "5rem"}} mt={{base: "4vw", lg: 0}}>
         <Heading>Moddy (Open-source)</Heading>
         <Text fontFamily={"Space Mono"}>02/2022 - 04/2021</Text>
         <Box mt="2rem" maxW="600px" fontFamily={"Pt Serif"}>
@@ -67,7 +67,14 @@ function Moddy() {
 
 function Helios() {
   return (
-    <Flex justifyContent="left" alignItems="center" width="100%" mt="7vw">
+    <Flex
+      justifyContent="center"
+      alignItems="center"
+      width="100%"
+      mt="7vw"
+      flexDir={{ base: "column", lg: "row" }}
+      p="1rem"
+    >
       <Image
         src={ResolveImage("icon/helios.png", 300, 166.66)}
         width="300px"
@@ -75,7 +82,7 @@ function Helios() {
         alt="Moddy profile picture"
         style={{ borderRadius: "10%" }}
       />
-      <Box ml="5rem" textAlign={"left"}>
+      <Box ml={{base: "0", lg: "5rem"}} mt={{base: "4vw", lg: 0}}>
         <Heading>Helios (Intern)</Heading>
         <Text fontFamily={"Space Mono"}>06/2021 - 07/2021</Text>
         <Box mt="2rem" maxW="600px" fontFamily={"Pt Serif"}>
