@@ -18,7 +18,7 @@ export default function Header() {
     function handleResize(height: number, width: number) {
       // Set window width/height to state
       setWidth(width);
-      setHeight(height + 10);
+      setHeight(height + 50);
     }
     // Call handler right away so state gets updated with initial window size
     handleResize(window.innerHeight, window.innerWidth);
@@ -37,7 +37,7 @@ export default function Header() {
           height={height}
           alt="Banner image"
           objectFit="cover"
-          objectPosition={"0 50%"}
+          objectPosition={"0 20%"}
         />
       </Box>
       <Flex

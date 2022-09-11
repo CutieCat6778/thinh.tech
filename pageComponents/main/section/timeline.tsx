@@ -1,14 +1,15 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { ResolveImage } from "../../../utils/utils";
 
 export default function Timeline() {
   return (
-    <Box width={"100%"} p="1rem">
+    <Stack width={"100%"} p="1rem" spacing={"7vw"}>
       <Moddy />
       <Helios />
-    </Box>
+      <GleasonIntern />
+    </Stack>
   );
 }
 
@@ -71,19 +72,18 @@ function Helios() {
       justifyContent="center"
       alignItems="center"
       width="100%"
-      mt="7vw"
       flexDir={{ base: "column", lg: "row" }}
     >
       <Image
         src={ResolveImage("icon/helios.png", 300, 166.66)}
         width="300px"
         height={"166.66px"}
-        alt="Moddy profile picture"
+        alt="Helios ventilatoren profile picture"
         style={{ borderRadius: "10%" }}
       />
       <Box ml={{base: "0", lg: "5rem"}} mt={{base: "4vw", lg: 0}}>
         <Heading>Helios (Intern)</Heading>
-        <Text fontFamily={"Space Mono"}>06/2021 - 07/2021</Text>
+        <Text fontFamily={"Space Mono"}>06/2020 - 07/2020</Text>
         <Box mt="2rem" maxW="600px" fontFamily={"Pt Serif"}>
           Helios Ventilatoren GmbH is a company about air conditioner, I worked
           there as a Systemadminsitator, from there I have learned about Server,
@@ -106,4 +106,43 @@ function Helios() {
       </Box>
     </Flex>
   );
+}
+
+function GleasonIntern() {
+  return (
+    <Flex
+      justifyContent="center"
+      alignItems="center"
+      width="100%"
+      flexDir={{ base: "column", lg: "row-reverse" }}
+    >
+      <Image
+        src={ResolveImage("icon/gleason.png", 300, 200)}
+        width="300px"
+        height={"200px"}
+        alt="Gleason profile picture"
+        style={{ borderRadius: "10%" }}
+      />
+      <Box mr={{base: "0", lg: "5rem"}} mt={{base: "4vw", lg: 0}}>
+        <Heading>Gleason Cuttings Tools GbmH (Intern)</Heading>
+        <Text fontFamily={"Space Mono"}>05/2021 - 06/2021</Text>
+        <Box mt="2rem" maxW="600px" fontFamily={"Pt Serif"}>
+          Gleason Cuttings Tools GmbH is a logistic company that makes gear and cutting tools for metal. They have a really big automation robots that allow them to produce their product 24/7, it really surprised me how the structure of their company. I had a chance to work there as a Systemadminsitrator, to responcible for any client problem and repair them.
+          <Box mt="1rem" color="black">
+            <Link href="https://www.gleason.com/">
+              <Button variant={"link"} ml="1rem" minW="100px" color="black">
+                <Image
+                  src={ResolveImage("icon/browser.svg", 32, 32)}
+                  height="32px"
+                  width="32px"
+                  alt="Website logo"
+                />
+                Website
+              </Button>
+            </Link>
+          </Box>
+        </Box>
+      </Box>
+    </Flex>
+  )
 }

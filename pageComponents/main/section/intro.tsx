@@ -70,7 +70,7 @@ function Intro() {
         alignItems={{base: "center", lg: "left"}}
         justifyContent={"center"}
       >
-        <Heading textAlign={{base: "center", lg: "left"}}>Thinh Nguyen, Student</Heading>
+        <Heading textAlign={{base: "center", lg: "left"}} width="100%">Thinh Nguyen, Germany</Heading>
         <Box
           fontFamily={"Pt Serif"}
           fontWeight="500"
