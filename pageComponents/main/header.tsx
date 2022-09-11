@@ -9,6 +9,7 @@ import { ResolveImage } from "../../utils/utils";
 export default function Header() {
   let [width, setWidth] = useState(0);
   let [height, setHeight] = useState(0);
+  let [inView, setInView] = useState(true);
 
   const rootRef = useRef(null);
   const ref = useRef(null);
@@ -22,7 +23,8 @@ export default function Header() {
     }
     // Call handler right away so state gets updated with initial window size
     handleResize(window.innerHeight, window.innerWidth);
-  });
+    setInView(isInView);
+  }, [isInView]);
 
   return (
     <Box width="100%" height={height} color="white">
@@ -83,7 +85,7 @@ export default function Header() {
         <FramerBox
           ref={rootRef}
           animate={
-            isInView
+            inView
               ? {
                   scale: [1, 2, 2, 1, 1],
                   y: [
