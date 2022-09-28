@@ -7,6 +7,7 @@ import "@fontsource/open-sans"
 import "@fontsource/space-mono"
 import { ChakraProvider, CSSReset } from '@chakra-ui/react'
 import { theme } from "../utils/theme"
+import { MDXProvider } from '@mdx-js/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ChakraProvider theme={theme}>
         <CSSReset/>
-        <Component {...pageProps} />
+        <MDXProvider>
+          <Component {...pageProps} />
+        </MDXProvider>
       </ChakraProvider>
     </>
   )

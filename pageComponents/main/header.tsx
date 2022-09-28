@@ -13,7 +13,7 @@ export default function Header() {
 
   const rootRef = useRef(null);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, root: rootRef });
+  const isInView = useInView(ref, { root: rootRef, once: true });
 
   useEffect(() => {
     function handleResize(height: number, width: number) {
@@ -27,11 +27,11 @@ export default function Header() {
   }, [isInView]);
 
   return (
-    <Box width="100%" height={height} color="white">
+    <Box width="100%" height={height} color="white" id="headerf">
       <Box position="absolute" zIndex={-1} height="100%" width={"auto"}>
         <Image
           src={ResolveImage(
-            `v2/backgrounds/${Math.round(Math.random() * 4)}.jpg`,
+            `v2/backgrounds/1.jpg`,
             width,
             height
           )}

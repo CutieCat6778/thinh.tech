@@ -10,12 +10,16 @@ const IntroBox = () => {
   const [inView, setInView] = useState(true);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [trigger, setTrigger] = useState(false);
 
   useEffect(() => {
+    setTimeout(() => {
+      setTrigger(true);
+    }, 500);
     setInView(isInView);
   }, [isInView]);
 
-  return (
+  if(trigger) return (
     <FramerBox
       ref={ref}
       animate={
@@ -27,10 +31,15 @@ const IntroBox = () => {
           : ""
       }
       // @ts-ignore no problem in operation, although type error appears.
-      transition={{
-        duration: 1,
-        ease: "easeInOut",
-      }}
+      transition={
+        inView
+          ? {
+              delay: 0.2,
+              duration: 1,
+              ease: "easeInOut",
+            }
+          : ""
+      }
     >
       <Intro />
     </FramerBox>
@@ -43,13 +52,10 @@ function Intro() {
       flexDir={{ base: "column", lg: "row" }}
       justifyContent={"center"}
       alignItems="center"
+      id="intro"
       backgroundColor="white"
     >
-      <Box
-        maxH="300px"
-        maxW="300px"
-        mb={{base: "5vw", lg: "0"}}
-      >
+      <Box maxH="300px" maxW="300px" mb={{ base: "5vw", lg: "0" }}>
         <Image
           style={{
             borderRadius: "100%",
@@ -65,17 +71,19 @@ function Intro() {
       </Box>
       <Flex
         maxWidth={"500px"}
-        ml={{base: 0, lg: "3rem"}}
+        ml={{ base: 0, lg: "3rem" }}
         flexDir={"column"}
-        alignItems={{base: "center", lg: "left"}}
+        alignItems={{ base: "center", lg: "left" }}
         justifyContent={"center"}
       >
-        <Heading textAlign={{base: "center", lg: "left"}} width="100%">Thinh Nguyen, Germany</Heading>
+        <Heading textAlign={{ base: "center", lg: "left" }} width="100%">
+          Thinh Nguyen, Germany
+        </Heading>
         <Box
           fontFamily={"Pt Serif"}
           fontWeight="500"
           mt="1rem"
-          textAlign={{base: "center", lg: "left"}}
+          textAlign={{ base: "center", lg: "left" }}
         >
           Hi there, this is my personal website. With this website, I can
           introduce my self to you, so you can understand better.
@@ -84,7 +92,11 @@ function Intro() {
           </Text>
           <Box mt="1rem">
             <Heading fontSize="lg">Contact:</Heading>
-            <Flex py="1rem" width={"100%"} justifyContent={{base: "center", lg: "left"}}>
+            <Flex
+              py="1rem"
+              width={"100%"}
+              justifyContent={{ base: "center", lg: "left" }}
+            >
               <Button fontFamily={"Comfortaa"}>
                 <Link href="mailto:thinh@thinh.tech">Email</Link>
               </Button>

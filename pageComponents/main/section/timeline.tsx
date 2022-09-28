@@ -5,7 +5,7 @@ import { ResolveImage } from "../../../utils/utils";
 
 export default function Timeline() {
   return (
-    <Stack width={"100%"} p="1rem" spacing={"7vw"}>
+    <Stack width={"100%"} p="1rem" spacing={"7vw"} id="timeline">
       <Moddy />
       <Helios />
       <GleasonIntern />
@@ -21,6 +21,7 @@ function Moddy() {
       alignItems="center"
       width="100%"
       flexDir={{ base: "column", lg: "row-reverse" }}
+      id="timeline-moddy"
     >
       <Image
         src={ResolveImage("moddy/moddy.png", 300, 300)}
@@ -74,6 +75,7 @@ function Helios() {
       alignItems="center"
       width="100%"
       flexDir={{ base: "column", lg: "row" }}
+      id="timeline-helios"
     >
       <Image
         src={ResolveImage("icon/helios.png", 300, 166.66)}
@@ -116,6 +118,8 @@ function GleasonIntern() {
       alignItems="center"
       width="100%"
       flexDir={{ base: "column", lg: "row-reverse" }}
+      id="timeline-gleason-1"
+
     >
       <Image
         src={ResolveImage("icon/gleason.png", 300, 200)}
@@ -154,6 +158,7 @@ function Gleason() {
       justifyContent="center"
       alignItems="center"
       width="100%"
+      id="timeline-gleason-2"
       flexDir={{ base: "column", lg: "row" }}
     >
       <Image

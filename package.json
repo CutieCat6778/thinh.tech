@@ -18,8 +18,11 @@
     "@fontsource/pt-serif": "^4.5.10",
     "@fontsource/silkscreen": "^4.5.0",
     "@fontsource/space-mono": "^4.5.10",
+    "@mdx-js/react": "^2.1.3",
     "framer-motion": "^7.3.2",
+    "gray-matter": "^4.0.3",
     "next": "12.2.5",
+    "next-mdx-remote": "^4.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
