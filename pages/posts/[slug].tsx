@@ -15,8 +15,6 @@ interface IProps {
 const Article: FunctionComponent<IProps> = ({ article }) => {
 	return <Box>
         <Box>
-            <Image src={ResolveImage(article.meta.thumbnail, 500, 800)} height="500" width="800" alt="Image" />
-
             <div className={styles.title}>
                 <h1>{article.meta.title}</h1>
             </div>
