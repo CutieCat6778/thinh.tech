@@ -19,7 +19,8 @@ const IntroBox = () => {
     setInView(isInView);
   }, [isInView]);
 
-  if(trigger) return (
+  if(trigger) {
+    return (
     <FramerBox
       ref={ref}
       animate={
@@ -43,7 +44,7 @@ const IntroBox = () => {
     >
       <Intro />
     </FramerBox>
-  );
+  )} else return null
 };
 
 function Intro() {
