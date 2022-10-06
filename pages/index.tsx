@@ -14,7 +14,7 @@ const Home: FunctionComponent<IProps> = ({ posts }) => {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch('http://localhost:3000/api/get-posts')
+  const res = await fetch('https://www.thinh.tech/api/get-posts')
   const posts: ArticleInfo[] = await res.json();
 
   return {

@@ -24,7 +24,7 @@ export default ArticleBySlug;
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const slug = context.params?.id!;
 
-  const res = await fetch('http://localhost:3000/api/get-post?id='+slug)
+  const res = await fetch('https://www.thinh.tech/api/get-post?id='+slug)
 
   const post = await res.json();
   post.content = await serialize(post.content);
