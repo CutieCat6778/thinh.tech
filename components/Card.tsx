@@ -1,19 +1,19 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import { ArticleMeta } from "../types/article";
+import { ArticleInfo } from "../types/article";
 
 interface IProps {
-  article: ArticleMeta;
+  posts: ArticleInfo;
 }
 
-const Card: FunctionComponent<IProps> = ({ article }) => {
+const Card: FunctionComponent<IProps> = ({ posts }) => {
   return (
-    <Link href={`/article/${article.slug}`}>
+    <Link href={`/posts/${posts.slug}`}>
       <Box width={"400px"} height="100%" borderRadius={"10px"}>
         <Box>
-          <Heading>{article.title}</Heading>
-          <Text fontFamily={"Open Sans"}>{article.description}</Text>
+          <Heading>{posts.data.title}</Heading>
+          <Text fontFamily={"Open Sans"}>{posts.data.description}</Text>
         </Box>
       </Box>
     </Link>

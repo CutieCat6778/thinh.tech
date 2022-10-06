@@ -1,22 +1,22 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Posts from "./posts";
 import Timeline from "./timeline";
-import { ArticleMeta } from "../../../types/article";
+import { ArticleInfo } from "../../../types/article";
 import { FC, useEffect, useRef, useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { useInView } from "framer-motion";
 import FramerBox from "../../../components/framerbox";
 
 interface IProps {
-  articles: ArticleMeta[];
+  posts: ArticleInfo[];
 }
 
 interface EProps {
-  articles: ArticleMeta[];
+  posts: ArticleInfo[];
   state: number;
 }
 
-const Slider: FC<IProps> = ({ articles }) => {
+const Slider: FC<IProps> = ({ posts }) => {
   const maxSlide = 1;
   const [state, setState] = useState(0);
   const [heading, setHeading] = useState("Timeline");
@@ -43,12 +43,12 @@ const Slider: FC<IProps> = ({ articles }) => {
           <ChevronRightIcon onClick={ToRight} fontSize="2xl" />
         </Flex>
       </Flex>
-      <SliderContent articles={articles} state={state} />
+      <SliderContent posts={posts} state={state} />
     </Box>
   );
 };
 
-const SliderContent: FC<EProps> = ({ articles, state }) => {
+const SliderContent: FC<EProps> = ({ posts, state }) => {
   const rootRef = useRef(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { root: rootRef, once: true });
@@ -115,7 +115,7 @@ const SliderContent: FC<EProps> = ({ articles, state }) => {
                 : ""
             }
           >
-            <Posts articles={articles} />
+            <Posts posts={posts} />
           </FramerBox>
         </Box>
       );

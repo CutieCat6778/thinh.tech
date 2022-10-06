@@ -1,14 +1,14 @@
 import { Divider, Flex } from "@chakra-ui/react";
-import { ArticleMeta } from "../../types/article";
+import { ArticleInfo } from "../../types/article";
 import IntroBox from "./section/intro";
 import Slider from "./section/slider";
 import { FC } from "react";
 
 interface Props {
-  articles: ArticleMeta[];
+  posts: ArticleInfo[];
 }
 
-const Section: FC<Props> = ({ articles }) => {
+const Section: FC<Props> = ({ posts }) => {
   return (
     <Flex
       width={"100%"}
@@ -20,7 +20,7 @@ const Section: FC<Props> = ({ articles }) => {
     >
       <IntroBox />
       <Divider my="4vw" />
-      <Slider articles={articles}/>
+      <Slider posts={posts}/>
     </Flex>
   );
 };

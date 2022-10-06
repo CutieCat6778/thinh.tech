@@ -1,6 +1,7 @@
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
+
 interface ArticleMeta {
     title: string;
-    slug: string;
     description: string;
     tags: string[];
     date: string;
@@ -9,8 +10,9 @@ interface ArticleMeta {
 }
 
 interface ArticleInfo {
-    meta: ArticleMeta;
-    content: string;
+    data: ArticleMeta;
+    content: string | MDXRemoteSerializeResult;
+    slug: string;
 }
 
 export type {

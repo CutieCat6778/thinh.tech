@@ -1,19 +1,19 @@
 import { Box } from "@chakra-ui/react"
 import { FC } from "react"
-import { ArticleMeta } from "../../types/article"
+import { ArticleInfo } from "../../types/article"
 import Footer from "./footer"
 import Header from "./header"
 import Section from "./section"
 
 interface Props {
-  articles: ArticleMeta[]
+  posts: ArticleInfo[]
 }
 
-const Main: FC<Props> = ({articles}) => {
+const Main: FC<Props> = ({posts}) => {
   return (
     <Box height="100%" width="100%">
       <Header/>
-      <Section articles={articles}/>
+      <Section posts={posts}/>
       <Footer/>
     </Box>
   )

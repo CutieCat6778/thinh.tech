@@ -1,38 +1,27 @@
-import matter from 'gray-matter'
-import fs from 'fs'
 import { FunctionComponent } from 'react'
-import { ArticleMeta } from "../types/article";
+import { ArticleInfo } from "../types/article";
 import Main from '../pageComponents/main';
+import { getPosts } from '../utils/utils';
 
 interface IProps {
-  articles: ArticleMeta[];
+  posts: ArticleInfo[];
 }
 
-const Home: FunctionComponent<IProps> = ({ articles }) => {
+const Home: FunctionComponent<IProps> = ({ posts }) => {
   return (
-    <Main articles={articles}/>
+    <Main posts={posts}/>
   )
 }
 
-export async function getStaticProps() {
-  const files = fs.readdirSync("uploads");
-  
-  let articles = files.map(file => {
-      const data = fs
-          .readFileSync(`uploads/${file}`)
-          .toString();
-
-      return {
-          ...matter(data).data,
-          slug: file.split('.')[0]
-      };
-  });
+export const getServerSideProps = async () => {
+  const res = await fetch('http://localhost:3000/api/get-posts')
+  const posts: ArticleInfo[] = await res.json();
 
   return {
-      props: {
-          articles: articles
-      }
+    props: {
+      posts,
+    },
   };
-}
+};
 
 export default Home

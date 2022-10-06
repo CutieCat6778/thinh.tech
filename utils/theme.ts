@@ -34,7 +34,6 @@ export const theme = extendTheme(DefaultTheme, {
     fonts: {
         heading: "Open Sans",
         mono: "Space Mono",
-        body: "Pt Serif, Comfortaa"
     },
     breakpoints: breakpoints,
     config: {

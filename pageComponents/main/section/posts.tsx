@@ -2,20 +2,18 @@ import { Box, Flex, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 import { FC, Key } from "react";
 import Card from "../../../components/Card";
-import { ArticleMeta } from "../../../types/article";
+import { ArticleInfo } from "../../../types/article";
 
 interface IProps {
-  articles: ArticleMeta[];
+  posts: ArticleInfo[];
 }
 
-const Posts: FC<IProps> = ({ articles }) => {
-  console.log(articles);
-
+const Posts: FC<IProps> = ({ posts }) => {
   return (
     <Box width="100%" px={{base: 0, md: "25vw"}}>
 			<Flex mb="1rem" justifyContent={"space-between"}>
 				<Heading fontSize="sm" color="#444">
-					{articles.length} posts
+					{posts.length} posts
 				</Heading>
 				<Heading fontSize="sm" color="#444">
 					<Link href="https://github.com/CutieCat6778/my_profile">
@@ -23,9 +21,9 @@ const Posts: FC<IProps> = ({ articles }) => {
 					</Link>
 				</Heading>
 			</Flex>
-      {articles
-        ? articles.map((articles: ArticleMeta, i: Key | null | undefined) => (
-            <Card key={i} article={articles} />
+      {posts
+        ? posts.map((post: ArticleInfo, i: Key | null | undefined) => (
+            <Card key={i} posts={post} />
           ))
         : null}
     </Box>
