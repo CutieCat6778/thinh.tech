@@ -23,20 +23,6 @@ const nextConfig = withMDX({
       ...config.resolve.fallback,
       fs: false,
     };
-    config.module.rules.push({
-      test: /\.mdx?$/,
-      use: [
-        options.defaultLoaders.babel,
-        {
-          loader: "@mdx-js/loader",
-          options: {
-            providerImportSource: "@mdx-js/react",
-            remarkPlugins: [remarkFrontmatter],
-            rehypePlugins: [rehypeHighlight],
-          },
-        },
-      ],
-    });
     return config;
   },
   images: {

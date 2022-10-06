@@ -7,7 +7,6 @@ import "@fontsource/open-sans"
 import "@fontsource/space-mono"
 import { ChakraProvider, CSSReset, Heading, Text } from '@chakra-ui/react'
 import { theme } from "../utils/theme"
-import { MDXProvider } from '@mdx-js/react';
 
 const MDXComponents = {
   h1: Heading,
@@ -22,9 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ChakraProvider theme={theme}>
         <CSSReset/>
-        <MDXProvider components={MDXComponents}>
-          <Component {...pageProps} />
-        </MDXProvider>
+        <Component {...pageProps} />
       </ChakraProvider>
     </>
   )
