@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Heading, Link, Text } from "@chakra-ui/react";
 import NextImage from "next/image";
 
 export const mdxComponents = {
@@ -7,5 +7,11 @@ export const mdxComponents = {
   },
   p: (props: any) => {
     return <Text {...props} fontFamily="Open Sans" />;
+  },
+  h1: (props: any) => {
+    return <Heading {...props} fontFamily="Comfortaa" />;
+  },
+  a: (props: any) => {
+    return <Link {...props} />;
   },
 };
