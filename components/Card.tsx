@@ -12,7 +12,9 @@ const Card: FunctionComponent<IProps> = ({ posts }) => {
     <Link href={`/posts/${posts.slug}`}>
       <Box width={"400px"} height="100%" borderRadius={"10px"}>
         <Box>
-          <Heading>{posts.data.title}</Heading>
+          <Heading _hover={{
+            textDecoration: "underline"
+          }}>{posts.data.title}</Heading>
           <Text fontFamily={"Open Sans"}>{posts.data.description}</Text>
         </Box>
       </Box>

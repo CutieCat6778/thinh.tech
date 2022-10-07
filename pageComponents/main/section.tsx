@@ -1,4 +1,4 @@
-import { Divider, Flex } from "@chakra-ui/react";
+import { Box, Divider, Flex } from "@chakra-ui/react";
 import { ArticleInfo } from "../../types/article";
 import IntroBox from "./section/intro";
 import Slider from "./section/slider";
@@ -19,7 +19,9 @@ const Section: FC<Props> = ({ posts }) => {
       backgroundColor="white"
     >
       <IntroBox />
-      <Divider my="4vw" />
+      <Box width={"40%"} opacity="0.6">
+        <Divider my="4vw" borderColor={"black"} />
+      </Box>
       <Slider posts={posts}/>
     </Flex>
   );

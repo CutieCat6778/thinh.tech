@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react"
+import { Box, Divider, Flex } from "@chakra-ui/react"
 import { FC } from "react"
 import { ArticleInfo } from "../../types/article"
 import Footer from "./footer"
@@ -14,6 +14,9 @@ const Main: FC<Props> = ({posts}) => {
     <Box height="100%" width="100%">
       <Header/>
       <Section posts={posts}/>
+      <Box width={"100%"} opacity="0.6" px={{base: "4vw", md: "30vw"}}>
+        <Divider my="3rem" mt="5rem" borderColor={"black"} />
+      </Box>
       <Footer/>
     </Box>
   )
