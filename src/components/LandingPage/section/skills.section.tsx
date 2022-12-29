@@ -87,7 +87,7 @@ export function SkillsBox() {
                         </Tr>
                         <Tr>
                             <Td>
-                                <TextLinkBox text="HTML" url="https://html.com/"/>
+                                <TextLinkBox text="GoLang" url="https://go.dev/"/>
                             </Td>
                             <Td>
                                 <TextLinkBox text="ReactJS" url="https://reactjs.org/"/>
