@@ -1,5 +1,4 @@
 import Head from "next/head";
-import DarkModeIcon from "../components/DarkModeIcon";
 import style from "../styles/Home.module.css";
 import { Rowdies, Roboto_Slab } from "@next/font/google";
 import Image from "next/image";
