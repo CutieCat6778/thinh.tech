@@ -1,5 +1,6 @@
-html, body {
-  background-color: 
+html,
+body {
+  background-color: ;
 }
 
 @tailwind base;
@@ -8,22 +9,25 @@ html, body {
 
 @layer base {
   h1 {
-    @apply text-3xl
+    @apply text-3xl;
   }
 
   :root {
-    --color-blue-light: #BDE0FE;
-    --color-blue: #A2D2FF;
-    --color-blue-dark: #70BAFF;
-    --color-purple: #CDB4DB;
-    --color-pink: #FFAFCC;
-    --color-pink-light: #FFC8DD
+    --color-blue-light: #cad5f3;
+    --color-blue: #92acef;
+    --color-blue-dark: #70baff;
+    --color-purple: #6f5490;
+    --color-purple-light: #bda5ca;
+    --color-pink: #ff6996;
+    --color-pink-light: #ffaac3;
+    --color-yellow: #fbb348;
+    --color-yellow-light: #fbba59;
   }
 }
 
 @layer components {
   .color-blue {
-    color: var(--color-blue)
+    color: var(--color-blue);
   }
 
   .color-blue-dark {
@@ -44,5 +48,48 @@ html, body {
 
   .color-pink {
     color: var(--color-pink);
+  }
+
+  .color-yellow-light {
+    color: var(--color-yellow-light);
+  }
+
+  .color-yellow {
+    color: var(--color-yellow);
+  }
+
+  .border-transparent {
+    border-transparent: 0;
+  }
+
+  .table-header {
+    @apply block
+    font-medium
+    text-xl
+    leading-tight
+    border-x-0 border-t-0 border-b-2 border-transparent
+    px-6
+    py-3
+    my-2;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-purple-light);
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-purple);
   }
 }

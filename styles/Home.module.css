@@ -117,3 +117,123 @@
     padding: 0 40px;
   }
 }
+
+/* Purple button */
+/* CSS */
+.btn_purple {
+  align-items: center;
+  background-color: var(--color-purple-light);
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn_purple:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.btn_purple:hover:after {
+  transform: translate(0, 0);
+}
+
+.btn_purple:active {
+  background-color: var(--color-purple);
+  outline: 0;
+}
+
+.btn_purple:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btn_purple {
+    padding: 0 40px;
+  }
+}
+
+/* Yellow button */
+/* CSS */
+.btn_yellow {
+  align-items: center;
+  background-color: var(--color-yellow-light);
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn_yellow:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.btn_yellow:hover:after {
+  transform: translate(0, 0);
+}
+
+.btn_yellow:active {
+  background-color: var(--color-yellow);
+  outline: 0;
+}
+
+.btn_yellow:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btn_yellow {
+    padding: 0 40px;
+  }
+}
