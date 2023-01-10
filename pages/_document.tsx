@@ -4,6 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <link rel="webmanifest" href="/manifest.webmanifest" />
+        <link rel="icon" href="/images/icons/icon-72x72.png"/>
       </Head>
       <body>
         <Main />
