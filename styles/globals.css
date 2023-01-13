@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: ;
+  background-color: white;
 }
 
 @tailwind base;
@@ -60,6 +60,15 @@ body {
 
   .border-transparent {
     border-transparent: 0;
+  }
+
+  embed {
+    min-width: 300px;
+    width: 600px;
+  }
+
+  embed {
+    @apply xl:w-144 sm:w-128 w-96
   }
 
   .table-header {

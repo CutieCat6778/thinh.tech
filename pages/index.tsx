@@ -203,6 +203,15 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="flex flex-col justify-center items-center">
+            <h2 className={rowdies.className + " text-3xl"}>
+              Experience graph
+            </h2>
+            <div className={"w-full mb-20 mt-5 flex items-center justify-center xl:flex-row flex-col"}>
+              <figure><embed src="https://wakatime.com/share/@CutieCat6778/36166772-aa59-498c-b0f2-10ae9caf1e05.svg"></embed></figure>
+              <figure><embed src="https://wakatime.com/share/@CutieCat6778/67f74198-936f-412e-9164-56511ffa4c2b.svg"></embed></figure>
+            </div>
+          </div>
         </section>
         <footer className={notoSerif.className + " w-full text-center"}>
           2023 © Thinh Nguyen all rights reserved
