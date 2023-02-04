@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rowdies {
+    font-family: var(--rowdies)
+}
+
+.roboto {
+    font-family: var(--roboto)
+}
+
+@layer base {
+    body {
+        @apply m-0 p-0 dark:bg-slate-900 bg-white w-auto h-auto text-gray-900 dark:text-white
+    }
+    h1 {
+        @apply text-4xl rowdies
+    }
+    h2 {
+        @apply roboto
+    }
+    .layout {
+        @apply flex flex-col items-center px-5 pt-5
+    }
+    .layout-child {
+        @apply max-w-screen-md
+    }
+    button {
+        @apply my-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rowdies px-6 py-1 rounded-md
+    }
+}
