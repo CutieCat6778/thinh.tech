@@ -11,7 +11,7 @@ export default function Home() {
 				<header>
 					<h1>Hi, my name is Thinh</h1>
 					<h2 className="mt-2 font-normal">
-						I'm a hobbist that loves to programm and develope
+						I&apos;m a hobbist that loves to programm and develope
 						computer stuff. My dream is to lead the world with the
 						latest technology!
 					</h2>
@@ -22,7 +22,7 @@ export default function Home() {
 					<div>
 						<h1 className="mb-4">Knowledgebase</h1>
 						<span>
-							I'm a self-taught web developer. My main programming language, that I feel the most comfortable with is javascript. I have more then 4 years experience in this language and most of my github project are writen with javascript!
+							I&apos;m a self-taught web developer. My main programming language, that I feel the most comfortable with is javascript. I have more then 4 years experience in this language and most of my github project are writen with javascript!
 						</span>
 						<Exprience />
 					</div>
@@ -30,7 +30,7 @@ export default function Home() {
 						<h1>Contact</h1>
 						<div className="my-2">
 							<span>
-								I'm currently a student, so kinda busy. I will
+								I&apos;m currently a student, so kinda busy. I will
 								try my best to answer all email and message
 								within 2-3 days. I have a very random life so
 								yeah, it is hilarious 🤣
