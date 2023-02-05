@@ -4,8 +4,8 @@ import ModeButton from "./Button";
 
 export default function NavBar() {
 	return (
-		<Link href="/">
-			<nav className="flex justify-between items-center my-5 w-full text-gray-900 dark:text-white text-xl">
+		<nav className="flex justify-between items-center my-5 w-full text-gray-900 dark:text-white text-xl">
+			<Link href="/">
 				<span className="flex justify-between items-center">
 					<div>
 						<Image
@@ -17,10 +17,10 @@ export default function NavBar() {
 					</div>
 					<h1 className="text-2xl ml-2">Thinh</h1>
 				</span>
-				<span className="">
-					<ModeButton />
-				</span>
-			</nav>
-		</Link>
+			</Link>
+			<span className="">
+				<ModeButton />
+			</span>
+		</nav>
 	);
 }
