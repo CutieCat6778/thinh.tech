@@ -53,7 +53,7 @@ export default function Home() {
 	);
 }
 
-export function Exprience() {
+function Exprience() {
 	return (
 		<div className="mt-4">
 			<ul className="mx-auto block sm:grid max-w-full w-full grid-cols-3 gap-x-5">
