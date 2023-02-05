@@ -14,7 +14,7 @@ export default function About() {
 						<span>
 							I was born into a middle-class family and raised by
 							parents who are both teachers. Growing up in an
-							teacher's family, I received a good education and am
+							teacher&apos;s family, I received a good education and am
 							proud to have been taught by my knowledgeable
 							parents.
 						</span>
