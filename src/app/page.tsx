@@ -12,9 +12,9 @@ export default function Home() {
 				<header>
 					<h1>Hi, my name is Thinh</h1>
 					<h2 className="mt-2 font-normal">
-						I&apos;m a hobbist that loves to programm and develope
-						computer stuff. My dream is to lead the world with the
-						latest technology!
+						I&apos;m a hobbyist who enjoys programming and creating
+						computer projects. My goal is to stay ahead of the
+						technology curve and innovate for the future.
 					</h2>
 					<Link href="/about">
 						<button className="">Read more about me!</button>
@@ -25,7 +25,12 @@ export default function Home() {
 					<div>
 						<h1 className="mb-4">Knowledgebase</h1>
 						<span>
-							I&apos;m a self-taught web developer. My main programming language, that I feel the most comfortable with is javascript. I have more then 4 years experience in this language and most of my github project are writen with javascript!
+							I am a self-taught web developer with expertise in
+							JavaScript, which I consider my primary programming
+							language. With over four years of experience, I have
+							honed my skills and demonstrated my proficiency
+							through a multitude of projects on GitHub, many of
+							which are written in JavaScript.
 						</span>
 						<Exprience />
 					</div>
@@ -33,10 +38,10 @@ export default function Home() {
 						<h1>Contact</h1>
 						<div className="my-2">
 							<span>
-								I&apos;m currently a student, so kinda busy. I will
-								try my best to answer all email and message
-								within 2-3 days. I have a very random life so
-								yeah, it is hilarious 🤣
+								As a student, I have a busy schedule, but I will
+								make an effort to respond to emails and messages
+								within 2-3 days. Life can be unpredictable, but
+								I always find humor in the chaos. 🤣
 							</span>
 							<div>
 								<Link href="mailto:thinh@thinh.tech">
@@ -47,7 +52,7 @@ export default function Home() {
 					</div>
 				</section>
 				<Divider />
-				<Footer/>
+				<Footer />
 			</div>
 		</main>
 	);
