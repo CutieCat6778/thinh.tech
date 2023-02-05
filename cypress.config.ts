@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
+  projectId: "f1uv6a",
   e2e: {
     setupNodeEvents(on, config) {
       
