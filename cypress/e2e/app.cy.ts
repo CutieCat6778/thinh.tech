@@ -9,7 +9,7 @@ export default describe('Get app', () => {
 
     cy.url().should('include', '/about')
 
-    cy.get("a").contains("Thinh").click()
+    cy.get("a").contains("Go back").click()
 
     cy.url().should("include", "/")
   })
