@@ -18,7 +18,7 @@ export default function Footer() {
 					href="https://discordapp.com/users/924351368897106061"
 					className="mt-2"
 				>
-					Instagram
+					Discord
 				</Link>
 			</div>
 			<div className="flex flex-col">
