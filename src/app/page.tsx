@@ -25,9 +25,9 @@ export default function Home() {
 					<div className="w-6/12 flex justify-start sm:justify-center">
 						<Image
 							src="/me.jpg"
-							className="rounded-xl shadow-lg"
-							height={192}
-							width={192}
+							className="rounded-xl shadow-2xl"
+							height={200}
+							width={200}
 							alt="Profile picture"
 						/>
 					</div>

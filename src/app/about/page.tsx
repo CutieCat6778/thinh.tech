@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function About() {
 	return (
 		<div>
-			<NavBar />
+			<NavBar root={true} />
 			<div className="my-10 md:mx-20 mx-0">
 				<header className="flex justify-center items-start sm:items-center w-full flex-col-reverse sm:flex-row">
 					<div className="sm:w-6/12 mt-6 sm:mt-0">
@@ -21,8 +21,8 @@ export default function About() {
 					</div>
 					<div className="w-6/12 flex justify-start sm:justify-center">
 						<Image
-							src="/me_2.jpg"
-							className="rounded-xl shadow-lg"
+							src="/me_3.jpg"
+							className="rounded-xl shadow-2xl"
 							height={200}
 							width={200}
 							alt="Profile picture"
