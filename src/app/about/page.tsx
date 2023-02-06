@@ -21,10 +21,10 @@ export default function About() {
 					</div>
 					<div className="w-6/12 flex justify-start sm:justify-center">
 						<Image
-							src="/me.jpg"
+							src="/me_2.jpg"
 							className="rounded-xl shadow-lg"
-							height={192}
-							width={192}
+							height={200}
+							width={200}
 							alt="Profile picture"
 						/>
 					</div>

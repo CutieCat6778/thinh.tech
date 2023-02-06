@@ -9,18 +9,30 @@ export default function Home() {
 		<main className="w-full">
 			<NavBar />
 			<div className="my-10 sm:mx-20 mx-0">
-				<header>
-					<h1>Hi, my name is Thinh</h1>
-					<h2 className="mt-2 font-normal">
-						I&apos;m a hobbyist who enjoys programming and creating
-						computer projects. My goal is to stay ahead of the
-						technology curve and innovate for the future.
-					</h2>
-					<Link href="/about">
-						<button className="">Read more about me!</button>
-					</Link>
-					<Divider />
+				<header className="flex justify-center items-start sm:items-center w-full flex-col-reverse sm:flex-row">
+					<div className="sm:w-6/12 mt-6 sm:mt-0">
+						<h1>Hi, my name is Thinh</h1>
+						<h2 className="mt-2 font-normal">
+							I&apos;m a hobbyist who enjoys programming and
+							creating computer science projects. My goal is to
+							make as many moneys and become the richest man in
+							the world.
+						</h2>
+						<Link href="/about">
+							<button className="">Read more about me!</button>
+						</Link>
+					</div>
+					<div className="w-6/12 flex justify-start sm:justify-center">
+						<Image
+							src="/me.jpg"
+							className="rounded-xl shadow-lg"
+							height={192}
+							width={192}
+							alt="Profile picture"
+						/>
+					</div>
 				</header>
+				<Divider />
 				<section>
 					<div>
 						<h1 className="mb-4">Knowledgebase</h1>
