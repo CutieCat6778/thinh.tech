@@ -11,10 +11,8 @@ export default function ModeButton() {
 		const newMode = mode === "light" ? "dark" : "light";
 		setMode(newMode);
 		if(mode != "light") {
-			document.documentElement.classList.remove("dark");
 			localStorage.setItem("theme", "light")
 		} else {
-			document.documentElement.classList.add("dark");
 			localStorage.setItem("theme", "dark")
 		}
 	}
@@ -29,6 +27,12 @@ export default function ModeButton() {
 				localStorage.setItem("theme", "light") 
 				setMode("light")
 				setTrigger(true);
+			}
+		} else {
+			if(mode == "light") {
+				document.documentElement.classList.remove("dark");
+			} else {
+				document.documentElement.classList.add("dark");
 			}
 		}
 	}, [mode, setMode, trigger]);
