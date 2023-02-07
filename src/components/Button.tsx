@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function ModeButton() {
-	const [mode, setMode] = useState(""); 
+	const [mode, setMode] = useState("light"); 
 	const [trigger, setTrigger] = useState(false); 
 
 	function SwitchMode() {
