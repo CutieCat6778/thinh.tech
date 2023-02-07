@@ -12,20 +12,22 @@ export default function ModeButton() {
 		setMode(newMode);
 		if(mode != "light") {
 			document.documentElement.classList.remove("dark");
+			localStorage.setItem("theme", "light")
 		} else {
 			document.documentElement.classList.add("dark");
+			localStorage.setItem("theme", "dark")
 		}
 	}
 
 	useEffect(() => {
+		setMode(localStorage.getItem("theme") ?? "light")
 		if(!trigger) {
-			console.log("Called")
-			if ( localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-				document.documentElement.classList.add("dark");
+			if ( localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+				localStorage.setItem("theme", "dark") 
 				setMode("dark")
 				setTrigger(true);
 			} else {
-				document.documentElement.classList.remove("dark");
+				localStorage.setItem("theme", "light") 
 				setMode("light")
 				setTrigger(true);
 			}
