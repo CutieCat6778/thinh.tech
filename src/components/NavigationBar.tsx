@@ -11,7 +11,7 @@ export default function NavBar({ root }: IProps) {
 	return (
 		<nav className="flex justify-between items-center my-5 w-full text-gray-900 dark:text-white text-xl">
 			<Link href="/">
-				<span className="flex justify-between items-center">
+				<div className="flex justify-between items-center">
 					<div>
 						<Image
 							src="/logo.svg"
@@ -21,7 +21,7 @@ export default function NavBar({ root }: IProps) {
 						/>
 					</div>
 					<h1 className="text-2xl ml-2">{!root ? "Thinh" : "Go back"}</h1>
-				</span>
+				</div>
 			</Link>
 			<span className="">
 				<ModeButton />

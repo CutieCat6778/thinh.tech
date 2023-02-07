@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function ModeButton() {
-	const [mode, setMode] = useState("light"); 
+	const [mode, setMode] = useState(""); 
 	const [trigger, setTrigger] = useState(false); 
 
 	function SwitchMode() {
@@ -20,7 +20,6 @@ export default function ModeButton() {
 	}
 
 	useEffect(() => {
-		setMode(localStorage.getItem("theme") ?? "light")
 		if(!trigger) {
 			if ( localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
 				localStorage.setItem("theme", "dark") 

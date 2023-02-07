@@ -92,7 +92,7 @@ function Exprience() {
 					<div className="w-full text-white dark:text-gray-900 rowdies bg-gray-900 rounded-b-md dark:bg-white transition-all duration-500 ease-in-out translate-x-40 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible peer-checked:translate-x-0">
 						<Divider props="my-0" />
 						<div className="flex flex-col justify-center p-1">
-							<span className="mx-2 my-2 flex items-center">
+							<div className="mx-2 my-2 flex items-center">
 								<Image
 									src="/js.svg"
 									height={32}
@@ -100,8 +100,8 @@ function Exprience() {
 									alt="Javascript Logo"
 								/>
 								<span className="ml-1">Javascript</span>
-							</span>
-							<span className="mx-2 my-2 flex items-center">
+							</div>
+							<div className="mx-2 my-2 flex items-center">
 								<Image
 									src="/ts.svg"
 									height={32}
@@ -109,8 +109,8 @@ function Exprience() {
 									alt="Typescript Logo"
 								/>
 								<span className="ml-1">Typescript</span>
-							</span>
-							<span className="mx-2 my-2 flex items-center">
+							</div>
+							<div className="mx-2 my-2 flex items-center">
 								<Image
 									src="/go.svg"
 									height={32}
@@ -118,7 +118,7 @@ function Exprience() {
 									alt="GoLang Logo"
 								/>
 								<span className="ml-1">GoLang</span>
-							</span>
+							</div>
 						</div>
 					</div>
 				</li>
@@ -139,7 +139,7 @@ function Exprience() {
 					<div className="w-full text-white dark:text-gray-900 rowdies bg-gray-900 dark:bg-white rounded-b-md transition-all duration-500 ease-in-out translate-y-10 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible peer-checked:translate-y-0">
 						<Divider props="my-0" />
 						<div className="flex flex-col justify-center p-1">
-							<span className="mx-2 my-2 items-center hidden dark:flex">
+							<div className="mx-2 my-2 items-center hidden dark:flex">
 								<Image
 									src="/next.svg"
 									height={32}
@@ -147,8 +147,8 @@ function Exprience() {
 									alt="Next Logo"
 								/>
 								<span className="ml-1">Next.js</span>
-							</span>
-							<span className="mx-2 my-2 flex items-center dark:hidden">
+							</div>
+							<div className="mx-2 my-2 flex items-center dark:hidden">
 								<Image
 									src="/next_white.svg"
 									height={32}
@@ -156,8 +156,8 @@ function Exprience() {
 									alt="Next Logo"
 								/>
 								<span className="ml-1">Next.js</span>
-							</span>
-							<span className="mx-2 my-2 flex items-center">
+							</div>
+							<div className="mx-2 my-2 flex items-center">
 								<Image
 									src="/nest.svg"
 									height={32}
@@ -165,8 +165,8 @@ function Exprience() {
 									alt="Javascript Logo"
 								/>
 								<span className="ml-1">Nest.js</span>
-							</span>
-							<span className="mx-2 my-2 flex items-center">
+							</div>
+							<div className="mx-2 my-2 flex items-center">
 								<Image
 									src="/go.svg"
 									height={32}
@@ -174,7 +174,7 @@ function Exprience() {
 									alt="Javascript Logo"
 								/>
 								<span className="ml-1">Gin Gonic</span>
-							</span>
+							</div>
 						</div>
 					</div>
 				</li>
@@ -195,7 +195,7 @@ function Exprience() {
 					<div className="w-full text-white dark:text-gray-900 rowdies bg-gray-900 dark:bg-white rounded-b-md transition-all duration-500 ease-in-out -translate-x-40 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible peer-checked:translate-x-0">
 						<Divider props="my-0" />
 						<div className="flex flex-col justify-center p-1">
-							<span className="mx-2 my-2 flex items-center">
+							<div className="mx-2 my-2 flex items-center">
 								<Image
 									src="/linux.svg"
 									height={32}
@@ -203,8 +203,8 @@ function Exprience() {
 									alt="Linux Logo"
 								/>
 								<span className="ml-1">Linux</span>
-							</span>
-							<span className="mx-2 my-2 flex items-center">
+							</div>
+							<div className="mx-2 my-2 flex items-center">
 								<Image
 									src="/api.svg"
 									height={32}
@@ -212,8 +212,8 @@ function Exprience() {
 									alt="Api Logo"
 								/>
 								<span className="ml-1">REST-API</span>
-							</span>
-							<span className="mx-2 my-2 flex items-center">
+							</div>
+							<div className="mx-2 my-2 flex items-center">
 								<Image
 									src="/container.svg"
 									height={32}
@@ -221,7 +221,7 @@ function Exprience() {
 									alt="Container Logo"
 								/>
 								<span className="ml-1">Container</span>
-							</span>
+							</div>
 						</div>
 					</div>
 				</li>
