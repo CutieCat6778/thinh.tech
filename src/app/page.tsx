@@ -24,7 +24,7 @@ export default function Home() {
 					</div>
 					<div className="w-6/12 flex justify-start sm:justify-center">
 						<Image
-							src="/me.jpg"
+							src="/me_3.jpg"
 							className="rounded-xl shadow-2xl"
 							height={200}
 							width={200}

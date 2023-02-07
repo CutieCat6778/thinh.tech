@@ -21,7 +21,7 @@ export default function About() {
 					</div>
 					<div className="w-6/12 flex justify-start sm:justify-center">
 						<Image
-							src="/me_3.jpg"
+							src="/me.jpg"
 							className="rounded-xl shadow-2xl"
 							height={200}
 							width={200}
