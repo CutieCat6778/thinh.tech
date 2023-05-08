@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: var(--font-bitter)
+}
+
+@layer base {
+  .c-bg-white {
+    @apply bg-white dark:bg-black
+  }
+  .c-bg-black {
+    @apply bg-black dark:bg-white
+  }
+  .c-text-white {
+    @apply text-white dark:text-black
+  }
+  .c-text-black {
+    @apply text-black dark:text-white
+  }
+
+  button {
+    @apply c-bg-white c-text-black px-4 py-1 rounded-md
+  }
+}
