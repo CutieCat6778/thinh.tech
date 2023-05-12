@@ -35,6 +35,16 @@ body {
   .c-text-black {
     @apply text-black dark:text-white
   }
+  .c-shadow-black {
+    @apply shadow-black dark:shadow-white
+  }
+  .c-shadow-white {
+    @apply shadow-white dark:shadow-black
+  }
+
+  .placeholder {
+    @apply h-screen opacity-0
+  }
 
   button {
     @apply c-bg-white c-text-black px-4 py-1 rounded-md

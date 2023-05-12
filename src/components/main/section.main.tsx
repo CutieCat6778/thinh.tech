@@ -3,7 +3,8 @@ import Image from "next/image";
 export default function Section() {
   return (
     <div>
-      <div className="flex px-10 justify-between items-center flex-row w-screen h-screen c-bg-black c-text-white">
+      <div className="placeholder"></div>
+      <div className="flex px-10 justify-between items-center flex-row h-screen c-bg-black c-text-white shadow-2xl c-shadow-white">
         <div className="w-1/2 h-auto">
           <Image
             src="/me-1.jpeg"
@@ -31,9 +32,7 @@ export default function Section() {
           </div>
         </div>
       </div>
-      <div>
-        
-      </div>
+      <div className="placeholder"></div>
     </div>
   );
 }
