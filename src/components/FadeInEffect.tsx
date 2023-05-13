@@ -6,7 +6,7 @@ export default function FadeInEffect({ children, className }: { children: ReactN
   return (
     <motion.div
       className={className}
-      animate={{
+      whileInView={{
         opacity: [0, 50, 100],
         x: [-100, -50, 0],
       }}

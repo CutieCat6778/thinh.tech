@@ -1,10 +1,11 @@
 import Image from "next/image";
+import SkillTable from "../SkillTable";
 
 export default function Section() {
   return (
     <div>
       <div className="placeholder"></div>
-      <div className="flex px-10 justify-between items-center flex-row h-screen c-bg-black c-text-white shadow-2xl c-shadow-white">
+      <div className="flex px-10 justify-between items-center flex-row h-screen d-bg d-text shadow-2xl">
         <div className="w-1/2 h-auto">
           <Image
             src="/me-1.jpeg"
@@ -33,6 +34,12 @@ export default function Section() {
         </div>
       </div>
       <div className="placeholder"></div>
+      <div className="flex px-10 justify-center items-center flex-row h-screen d-bg d-text shadow-2xl">
+        <div className="flex justify-center items-center flex-col">
+          <h1 className="text-3xl font-semibold mb-4">Programming skills</h1>
+          <SkillTable />
+        </div>
+      </div>
     </div>
   );
 }

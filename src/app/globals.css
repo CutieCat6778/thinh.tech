@@ -19,34 +19,23 @@ body {
   height: 100%;
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  font-family: var(--font-bitter)
+  font-family: var(--font-bitter);
 }
 
 @layer base {
-  .c-bg-white {
-    @apply bg-white dark:bg-black
-  }
-  .c-bg-black {
-    @apply bg-black dark:bg-white
-  }
-  .c-text-white {
-    @apply text-white dark:text-black
-  }
-  .c-text-black {
-    @apply text-black dark:text-white
-  }
-  .c-shadow-black {
-    @apply shadow-black dark:shadow-white
-  }
-  .c-shadow-white {
-    @apply shadow-white dark:shadow-black
+  .placeholder {
+    @apply h-screen opacity-0;
   }
 
-  .placeholder {
-    @apply h-screen opacity-0
+  .d-bg {
+    @apply bg-[#fff];
+  }
+
+  .d-text {
+    @apply text-[#000];
   }
 
   button {
-    @apply c-bg-white c-text-black px-4 py-1 rounded-md
+    @apply px-4 py-1 rounded-md;
   }
 }
