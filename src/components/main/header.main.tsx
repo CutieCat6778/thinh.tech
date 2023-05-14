@@ -30,7 +30,7 @@ function Wrapper({ height }: { height: number }) {
     setWindowHeight(window.innerHeight / 3);
   }, [windowHeight, setWindowHeight]);
 
-  if (height > windowHeight * 3 + 200) {
+  if (height > windowHeight * 3) {
     return <HeaderBox2 />;
   } else {
     return <HeaderBox />;
@@ -40,7 +40,7 @@ function Wrapper({ height }: { height: number }) {
 function HeaderBox() {
   return (
     <div className="flex justify-center items-center h-screen flex-col">
-      <div className="flex justify-center items-center flex-col d-bg d-text p-10 bg-opacity-70 rounded-lg shadow-2xl">
+      <div className="flex justify-center items-center flex-col md:d-bg md:d-text text-white p-10 md:bg-opacity-70 rounded-lg md:shadow-2xl">
         <h1 className="text-6xl">
           <Typewriter
             options={{
@@ -68,7 +68,7 @@ function HeaderBox() {
           x: 0,
           opacity: 100,
         }}
-        className="mt-5"
+        className="mt-5 text-center"
         >
           <span>
             A very young, talented and passioned developer.
