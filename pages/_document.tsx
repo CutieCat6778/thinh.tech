@@ -6,6 +6,7 @@ export default function Document() {
       <Head>
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="icon" href="/images/icons/icon-72x72.png"/>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAJebo1jj1wpiPmJ" data-callback="javascriptCallback"></div>
       </Head>
       <body>
         <Main />
